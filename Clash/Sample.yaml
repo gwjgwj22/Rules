@@ -1,5 +1,5 @@
 # Clash
-# Date: 2026-06-21 15:02:58
+# Date: 2026-06-25 17:05:16
 # Author: @HotKids
 
 # 通用设置
@@ -328,6 +328,22 @@ proxy-groups:
       - 🇸🇬 Singapore
       - 🇯🇵 Japan
       - 🇺🇸 America
+      - 🇨🇦 Canada
+      - 🇬🇧 United Kingdom
+      - 🇩🇪 Germany
+      - 🇫🇷 France
+      - 🇮🇹 Italy
+      - 🇪🇸 Spain
+      - 🇵🇹 Portugal
+      - 🇳🇬 Nigeria
+      - 🇰🇷 Korea
+      - 🇦🇺 Australia
+      - 🇵🇭 Philippines
+      - 🇲🇾 Malaysia
+      - 🇹🇭 Thailand
+      - 🇧🇷 Brazil
+      - 🇦🇷 Argentina
+      - 🇨🇱 Chile
       - 🇺🇳 Server
       - 🔘 DIRECT
 
@@ -379,6 +395,7 @@ proxy-groups:
     proxies:
       - 🇺🇸 America
       - 🇸🇬 Singapore
+      - 🇲🇴 Macau
       - 🔰 Proxy
 
   # Crypto
@@ -387,6 +404,11 @@ proxy-groups:
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cryptocurrency_3.png
     proxies:
       - 🇺🇸 America
+      - 🇩🇪 Germany
+      - 🇫🇷 France
+      - 🇵🇭 Philippines
+      - 🇳🇬 Nigeria
+      - 🇲🇾 Malaysia
       - 🔰 Proxy
       - 🔘 DIRECT
 
@@ -423,7 +445,6 @@ proxy-groups:
     proxies:
       - 🔘 DIRECT
       - ⛔️ REJECT
-      - 📛 REJECT-DROP
 
   # DIRECT
   - name: "🔘 DIRECT"
@@ -438,13 +459,6 @@ proxy-groups:
     hidden: true
     proxies:
       - REJECT
-
-  # REJECT-DROP
-  - name: "📛 REJECT-DROP"
-    type: select
-    hidden: true
-    proxies:
-      - REJECT-DROP
 
   # Nodes
   - name: "🇺🇳 Server"
@@ -488,6 +502,125 @@ proxy-groups:
     use:
       - Server
     filter: '🇺🇸|US|United States|美国'
+
+  - name: "🇨🇦 Canada"
+    type: select
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Canada.png
+    use:
+      - Server
+    filter: '🇨🇦|CA|Canada|加拿大'
+
+  - name: "🇬🇧 United Kingdom"
+    type: select
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_Kingdom.png
+    use:
+      - Server
+    filter: '🇬🇧|UK|GB|United Kingdom|Britain|英国'
+
+  - name: "🇩🇪 Germany"
+    type: select
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Germany.png
+    use:
+      - Server
+    filter: '🇩🇪|DE|Germany|德国'
+
+  - name: "🇫🇷 France"
+    type: select
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/France.png
+    use:
+      - Server
+    filter: '🇫🇷|FR|France|法国'
+
+  - name: "🇮🇹 Italy"
+    type: select
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Europe_Map.png
+    use:
+      - Server
+    filter: '🇮🇹|IT|Italy|Italia|意大利'
+
+  - name: "🇪🇸 Spain"
+    type: select
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Europe_Map.png
+    use:
+      - Server
+    filter: '🇪🇸|ES|Spain|西班牙'
+
+  - name: "🇵🇹 Portugal"
+    type: select
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Europe_Map.png
+    use:
+      - Server
+    filter: '🇵🇹|PT|Portugal|葡萄牙'
+
+  - name: "🇳🇬 Nigeria"
+    type: select
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Africa_Map.png
+    use:
+      - Server
+    filter: '🇳🇬|NG|Nigeria|尼日利亚'
+
+  - name: "🇰🇷 Korea"
+    type: select
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Korea.png
+    use:
+      - Server
+    filter: '🇰🇷|KR|Korea|South Korea|Republic of Korea|韩国'
+
+  - name: "🇦🇺 Australia"
+    type: select
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Australia.png
+    use:
+      - Server
+    filter: '🇦🇺|AU|Australia|澳大利亚|澳洲'
+
+  - name: "🇲🇴 Macau"
+    type: select
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Macao.png
+    use:
+      - Server
+    filter: '🇲🇴|MO|Macao|Macau|澳门'
+
+  - name: "🇵🇭 Philippines"
+    type: select
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Philippines.png
+    use:
+      - Server
+    filter: '🇵🇭|PH|Philippines|菲律宾'
+
+  - name: "🇲🇾 Malaysia"
+    type: select
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Malaysia.png
+    use:
+      - Server
+    filter: '🇲🇾|MY|Malaysia|马来西亚'
+
+  - name: "🇹🇭 Thailand"
+    type: select
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Thailand.png
+    use:
+      - Server
+    filter: '🇹🇭|TH|Thailand|泰国'
+
+  - name: "🇧🇷 Brazil"
+    type: select
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Brazil.png
+    use:
+      - Server
+    filter: '🇧🇷|BR|Brazil|Brasil|巴西'
+
+  - name: "🇦🇷 Argentina"
+    type: select
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Argentina.png
+    use:
+      - Server
+    filter: '🇦🇷|AR|Argentina|阿根廷'
+
+  - name: "🇨🇱 Chile"
+    type: select
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/LA_Map.png
+    use:
+      - Server
+    filter: '🇨🇱|CL|Chile|智利'
 
   # icon: https:
   # include-all: true
@@ -764,3 +897,4 @@ rules:
 
   # Final
   - MATCH,🔰 Proxy
+
