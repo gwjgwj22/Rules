@@ -51,6 +51,46 @@ Rules/
 
 ## 规则集订阅
 
+### Surge
+
+| 规则 | 订阅地址 |
+|------|----------|
+| Britbox | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/Britbox.list` |
+| CBC & Gem | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/CBC_Gem.list` |
+| Canal+ | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/Canal%2B.list` |
+| Crunchyroll | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/Crunchyroll.list` |
+| DAZN | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/DAZN.list` |
+| Discovery+ | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/Discovery%2B.list` |
+| Disney+ | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/Disney%2B.list` |
+| Duolingo | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/Duolingo.list` |
+| F1 TV | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/F1_TV.list` |
+| HBO GO | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/HBO_GO.list` |
+| HBO Max | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/HBO_Max.list` |
+| KKBOX | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/KKBOX.list` |
+| MEGOGO | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/MEGOGO.list` |
+| MUBI | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/MUBI.list` |
+| Openclash | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/Openclash.list` |
+| Paramount+ | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/Paramount%2B.list` |
+| STARZ & STARZPLAY | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/STARZ%26STARZPLAY.list` |
+| Setanta Sports | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/Setantasports.list` |
+| Sky CH | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/SkyCH.list` |
+| SkyShowtime | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/SkyShowtime.list` |
+| SkyShowtime+ | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/SkyShowtime%2B.list` |
+| SSport Plus | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/Ssportplus.list` |
+| Star+ | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/Star%2B.list` |
+| Streaming AU | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/StreamingAU.list` |
+| Streaming HK | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/StreamingHK.list` |
+| Streaming JP | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/StreamingJP.list` |
+| Streaming JP1 | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/StreamingJP1.list` |
+| Streaming KR | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/StreamingKR.list` |
+| Streaming KR1 | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/StreamingKR1.list` |
+| Streaming TW | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/StreamingTW.list` |
+| Streaming UK | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/StreamingUK.list` |
+| Streaming US | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/StreamingUS.list` |
+| Viu | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/Viu.list` |
+| iLook.tv | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/ilook.tv.list` |
+| OneFootball | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/onefootball.list` |
+
 ### Clash
 
 | 规则 | 订阅地址 |
