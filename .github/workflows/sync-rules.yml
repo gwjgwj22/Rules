@@ -1,0 +1,37 @@
+name: Sync Rules
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'Surge/RULE-SET/**'
+      - '.github/scripts/sync-rules.txt'
+      - '.github/scripts/sync-rules.py'
+  schedule:
+    - cron: '0 16 * * *'   # 每天 UTC 16:00 = UTC+8 00:00
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        run: git clone --depth=1 "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" .
+
+      - name: Run sync script
+        run: python3 .github/scripts/sync-rules.py
+
+      - name: Commit & push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add Surge/RULE-SET/ Surge/Module/ Quantumult/X/Filter/ Clash/RuleSet/ sing-box/source/
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: sync RULE-SET → QX / Clash / sing-box [auto]"
+            git push
+          fi

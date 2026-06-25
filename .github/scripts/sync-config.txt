@@ -1,0 +1,95 @@
+# ════════════════════════════════════════════════════════════════
+# sync-config.txt
+# ════════════════════════════════════════════════════════════════
+# 格式：
+#   # Platform          平台块（Surge / Clash / Quantumult X / Loon）
+#   >>  path            文件路径（Surge 块为源文件；其他为输出目标）
+#   # > Skip            跳过关键词（Surge 块 = 全局；平台块 = 仅该平台）
+#   # > Builtin         静态注入块（内容原样写入输出文件）
+#                       << path 引用文件作为输出头部
+#                       proxy-groups: 首条注释 # desc // AnchorGroupName
+#                       rules: 首条注释 # desc // AnchorRulePattern
+#                       指定插入锚点（插入到匹配行之后）
+#   # > Mapping         URL 映射（X => Y）；右侧留空表示路径不变仅规范扩展名
+#   # > Rename          Provider 名称映射（stem => 自定义名称）
+#   # > Gist            URL 反代（ReverseProxy => host）；平台块=局部，Surge 块=全局
+# ════════════════════════════════════════════════════════════════
+
+# Surge
+>> Surge/Profile.conf
+# > Skip
+Gateway
+Speedtest
+
+# Clash
+>> Clash/Sample.yaml
+# > Builtin
+<< .github/scripts/sync-config/clash.ini
+# > Gist
+ReverseProxy => testingcf.jsdelivr.net
+# > Skip
+ConnersHua
+iCloud
+Apple News
+Apple TV
+# > Mapping
+VirgilClyne/GetSomeFries =>
+Loyalsoldier/surge-rules => Loyalsoldier/clash-rules
+# > Rename
+rule-providers:
+  AD => Advertising
+  HTTPDNS.Block => HTTPDNS
+  ASN.China => CNASN
+  Gemini => Google AI Studio
+  GenAI => AIGC
+  proxy => Global
+  direct => China
+  private => Private
+  reject => Reject
+  cncidr => CNCIDR
+
+# Quantumult X
+>> Quantumult/Sample.conf
+# > Builtin
+<< .github/scripts/sync-config/qx.ini
+# > Skip
+iCloud
+Apple News
+Speedtest
+# > Rename
+[policy]
+  Proxy => Outbound
+  AdGuard => AdBlock
+[filter_remote]
+  AD => Adblock
+  HTTPDNS.Block => HTTPDNS
+  Spark => Mail
+  ASN.China => ASN China
+  iCloud.PrivateRelay => iCloud Private Relay
+  proxy => Global
+  direct => China
+  private => Private
+  reject => Reject
+  cncidr => CNCIDR
+
+# Loon
+>> Surge/Balloon.lcf
+# > Builtin
+<< .github/scripts/sync-config/loon.ini
+# > Rename
+[Remote Rule]
+  AD => Adblock
+  HTTPDNS.Block => HTTPDNS
+  Spark => Mail
+  ASN.China => ASN China
+  iCloud.PrivateRelay => iCloud Private Relay
+  proxy => Global
+  direct => China
+  private => Private
+  reject => Reject
+  cncidr => CNCIDR
+
+# Surfboard
+>> Surge/Surfboard.conf
+# > Builtin
+<< .github/scripts/sync-config/surfboard.ini
