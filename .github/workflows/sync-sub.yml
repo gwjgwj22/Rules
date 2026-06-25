@@ -20,10 +20,21 @@ jobs:
           gh release download --repo tindy2013/subconverter --pattern "subconverter_linux64.tar.gz" -D /tmp/sc
           tar -xzf /tmp/sc/subconverter_linux64.tar.gz -C /tmp/sc
 
-      - name: Start subconverter
+      - name: Configure and start subconverter
         run: |
+          # Allow HTTPS external config URLs (disabled by default)
+          PREF_TOML=/tmp/sc/subconverter/pref.toml
+          PREF_INI=/tmp/sc/subconverter/pref.ini
+          if [ -f "$PREF_TOML" ]; then
+            sed -i 's|^allowed_external_config_prefix = .*|allowed_external_config_prefix = "https://"|' "$PREF_TOML"
+            grep -q "allowed_external_config_prefix" "$PREF_TOML" || \
+              sed -i '/^\[common\]/a allowed_external_config_prefix = "https://"' "$PREF_TOML"
+          elif [ -f "$PREF_INI" ]; then
+            sed -i 's|^allowed_external_config_prefix=.*|allowed_external_config_prefix=https://|' "$PREF_INI"
+          fi
           cd /tmp/sc/subconverter && ./subconverter &
           sleep 2
+          curl -s http://127.0.0.1:25500/version || echo "WARNING: subconverter not responding"
 
       - name: Generate configs
         env:
@@ -34,22 +45,30 @@ jobs:
           ESUB=$(python3 -c "import urllib.parse,sys; print(urllib.parse.quote(sys.argv[1],safe=''))" "$SUB")
           ECFG=$(python3 -c "import urllib.parse,sys; print(urllib.parse.quote(sys.argv[1],safe=''))" "$CONFIG_URL")
 
+          echo "Config URL: $CONFIG_URL"
+
           # Surge
-          curl -fsSL -o "Surge/Sub.conf" \
-            "${BASE}?target=surge&ver=4&udp=1&tfo=1&url=${ESUB}&config=${ECFG}"
+          echo "--- Surge ---"
+          curl -sS -w "\nHTTP %{http_code}\n" -o "Surge/Sub.conf" \
+            "${BASE}?target=surge&ver=4&udp=1&tfo=1&url=${ESUB}&config=${ECFG}" || true
+          head -3 Surge/Sub.conf 2>/dev/null || echo "(empty)"
 
           # Clash
-          curl -fsSL -o "Clash/Sub.yaml" \
-            "${BASE}?target=clash&url=${ESUB}&config=${ECFG}"
+          echo "--- Clash ---"
+          curl -sS -w "\nHTTP %{http_code}\n" -o "Clash/Sub.yaml" \
+            "${BASE}?target=clash&url=${ESUB}&config=${ECFG}" || true
+          head -3 Clash/Sub.yaml 2>/dev/null || echo "(empty)"
 
           # Quantumult X
-          curl -fsSL -o "Quantumult/X/Sub.conf" \
-            "${BASE}?target=quanx&udp=1&tfo=1&url=${ESUB}&config=${ECFG}"
+          echo "--- Quantumult X ---"
+          curl -sS -w "\nHTTP %{http_code}\n" -o "Quantumult/X/Sub.conf" \
+            "${BASE}?target=quanx&udp=1&tfo=1&url=${ESUB}&config=${ECFG}" || true
 
           # Loon
+          echo "--- Loon ---"
           mkdir -p Loon
-          curl -fsSL -o "Loon/Sub.conf" \
-            "${BASE}?target=loon&url=${ESUB}&config=${ECFG}"
+          curl -sS -w "\nHTTP %{http_code}\n" -o "Loon/Sub.conf" \
+            "${BASE}?target=loon&url=${ESUB}&config=${ECFG}" || true
 
       - name: Commit & push
         run: |
