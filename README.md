@@ -1,94 +1,106 @@
 # Rules
 
-个人代理分流规则仓库。以 Surge 格式手动维护，由 GitHub Actions 自动转换并同步到 Clash、Quantumult X、Loon。
+自用流媒体代理分流规则。
 
 ---
 
-## 目录结构
-
-```
-Rules/
-├── Surge/
-│   ├── RULE-SET/       ← 在这里编辑规则（唯一需要手动维护的地方）
-│   ├── Profile.conf    ← Surge 完整配置文件
-│   └── Module/         ← Surge 模块（去广告等）
-├── Clash/
-│   ├── RuleSet/        ← 自动生成，不要手动编辑
-│   └── Sample.yaml     ← 自动生成的 Clash 完整配置
-├── Quantumult/
-│   └── X/Filter/       ← 自动生成，不要手动编辑
-└── .github/
-    ├── scripts/        ← 转换脚本
-    └── workflows/      ← 自动运行的 GitHub Actions
-```
-
-> **记住一件事**：只在 `Surge/RULE-SET/` 和 `Surge/Profile.conf` 里改内容，其余文件由 Actions 自动生成。
-
----
-
-## 规则订阅地址
-
-将下面的地址填入对应 App 即可。
-
-### Surge
-
-| 规则 | 订阅地址 |
-|------|----------|
-| Apple | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/Apple/Apple.list` |
-| Apple CN | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/Apple/Apple%20CN.list` |
-| Apple News | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/Apple/Apple%20News.list` |
-| APNS | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/Apple/APNS.list` |
-| Google | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/Google.list` |
-| Telegram | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/Telegram.list` |
-| Twitter | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/Twitter.list` |
-| Microsoft | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/Microsoft.list` |
-| Dropbox | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/Dropbox.list` |
-| PayPal | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/PayPal.list` |
+## 订阅地址
 
 ### Clash
 
+将地址填入 Clash 规则集（Rule Providers）。
+
 | 规则 | 订阅地址 |
 |------|----------|
-| Apple | `https://raw.githubusercontent.com/egwj/Rules/master/Clash/RuleSet/Apple.yaml` |
-| Google | `https://raw.githubusercontent.com/egwj/Rules/master/Clash/RuleSet/Google.yaml` |
-| Telegram | `https://raw.githubusercontent.com/egwj/Rules/master/Clash/RuleSet/Telegram.yaml` |
-| Twitter | `https://raw.githubusercontent.com/egwj/Rules/master/Clash/RuleSet/Twitter.yaml` |
-| Microsoft | `https://raw.githubusercontent.com/egwj/Rules/master/Clash/RuleSet/Microsoft.yaml` |
-| Dropbox | `https://raw.githubusercontent.com/egwj/Rules/master/Clash/RuleSet/Dropbox.yaml` |
-| PayPal | `https://raw.githubusercontent.com/egwj/Rules/master/Clash/RuleSet/PayPal.yaml` |
+| Britbox | `https://raw.githubusercontent.com/egwj/Rules/master/Clash/RuleSet/Britbox.list` |
+| CBC & Gem | `https://raw.githubusercontent.com/egwj/Rules/master/Clash/RuleSet/CBC_Gem.list` |
+| Canal+ | `https://raw.githubusercontent.com/egwj/Rules/master/Clash/RuleSet/Canal%2B.list` |
+| Crunchyroll | `https://raw.githubusercontent.com/egwj/Rules/master/Clash/RuleSet/Crunchyroll.list` |
+| DAZN | `https://raw.githubusercontent.com/egwj/Rules/master/Clash/RuleSet/DAZN.list` |
+| Discovery+ | `https://raw.githubusercontent.com/egwj/Rules/master/Clash/RuleSet/Discovery%2B.list` |
+| Disney+ | `https://raw.githubusercontent.com/egwj/Rules/master/Clash/RuleSet/Disney%2B.list` |
+| Duolingo | `https://raw.githubusercontent.com/egwj/Rules/master/Clash/RuleSet/Duolingo.list` |
+| F1 TV | `https://raw.githubusercontent.com/egwj/Rules/master/Clash/RuleSet/F1_TV.list` |
+| HBO Max | `https://raw.githubusercontent.com/egwj/Rules/master/Clash/RuleSet/HBO_Max.list` |
+| MUBI | `https://raw.githubusercontent.com/egwj/Rules/master/Clash/RuleSet/MUBI.list` |
+| Openclash | `https://raw.githubusercontent.com/egwj/Rules/master/Clash/RuleSet/Openclash.list` |
+| Paramount+ | `https://raw.githubusercontent.com/egwj/Rules/master/Clash/RuleSet/Paramount%2B.list` |
+| STARZ & STARZPLAY | `https://raw.githubusercontent.com/egwj/Rules/master/Clash/RuleSet/STARZ%26STARZPLAY.list` |
+| Setanta Sports | `https://raw.githubusercontent.com/egwj/Rules/master/Clash/RuleSet/Setantasports.list` |
+| Sky CH | `https://raw.githubusercontent.com/egwj/Rules/master/Clash/RuleSet/SkyCH.list` |
+| SSport Plus | `https://raw.githubusercontent.com/egwj/Rules/master/Clash/RuleSet/Ssportplus.list` |
+| Star+ | `https://raw.githubusercontent.com/egwj/Rules/master/Clash/RuleSet/Star%2B.list` |
+| Streaming AU | `https://raw.githubusercontent.com/egwj/Rules/master/Clash/RuleSet/StreamingAU.list` |
+| Streaming HK | `https://raw.githubusercontent.com/egwj/Rules/master/Clash/RuleSet/StreamingHK.list` |
+| Streaming JP | `https://raw.githubusercontent.com/egwj/Rules/master/Clash/RuleSet/StreamingJP.list` |
+| Streaming KR | `https://raw.githubusercontent.com/egwj/Rules/master/Clash/RuleSet/StreamingKR.list` |
+| Streaming TW | `https://raw.githubusercontent.com/egwj/Rules/master/Clash/RuleSet/StreamingTW.list` |
+| Streaming UK | `https://raw.githubusercontent.com/egwj/Rules/master/Clash/RuleSet/StreamingUK.list` |
+| Streaming US | `https://raw.githubusercontent.com/egwj/Rules/master/Clash/RuleSet/StreamingUS.list` |
+| Viu | `https://raw.githubusercontent.com/egwj/Rules/master/Clash/RuleSet/Viu.list` |
+| iLook.tv | `https://raw.githubusercontent.com/egwj/Rules/master/Clash/RuleSet/ilook.tv.list` |
+| OneFootball | `https://raw.githubusercontent.com/egwj/Rules/master/Clash/RuleSet/onefootball.list` |
 
 ### Quantumult X
 
+将地址填入 Quantumult X 的「分流规则」。
+
 | 规则 | 订阅地址 |
 |------|----------|
-| Apple | `https://raw.githubusercontent.com/egwj/Rules/master/Quantumult/X/Filter/Apple.list` |
-| Google | `https://raw.githubusercontent.com/egwj/Rules/master/Quantumult/X/Filter/Google.list` |
-| Telegram | `https://raw.githubusercontent.com/egwj/Rules/master/Quantumult/X/Filter/Telegram.list` |
-| Twitter | `https://raw.githubusercontent.com/egwj/Rules/master/Quantumult/X/Filter/Twitter.list` |
-| Microsoft | `https://raw.githubusercontent.com/egwj/Rules/master/Quantumult/X/Filter/Microsoft.list` |
-| Dropbox | `https://raw.githubusercontent.com/egwj/Rules/master/Quantumult/X/Filter/Dropbox.list` |
-| PayPal | `https://raw.githubusercontent.com/egwj/Rules/master/Quantumult/X/Filter/PayPal.list` |
+| Britbox | `https://raw.githubusercontent.com/egwj/Rules/master/Quantumult/Filter/Britbox.list` |
+| CBC & Gem | `https://raw.githubusercontent.com/egwj/Rules/master/Quantumult/Filter/CBC_Gem.list` |
+| Canal+ | `https://raw.githubusercontent.com/egwj/Rules/master/Quantumult/Filter/Canal%2B.list` |
+| Crunchyroll | `https://raw.githubusercontent.com/egwj/Rules/master/Quantumult/Filter/Crunchyroll.list` |
+| DAZN | `https://raw.githubusercontent.com/egwj/Rules/master/Quantumult/Filter/DAZN.list` |
+| Discovery+ | `https://raw.githubusercontent.com/egwj/Rules/master/Quantumult/Filter/Discovery%2B.list` |
+| Disney+ | `https://raw.githubusercontent.com/egwj/Rules/master/Quantumult/Filter/Disney%2B.list` |
+| Duolingo | `https://raw.githubusercontent.com/egwj/Rules/master/Quantumult/Filter/Duolingo.list` |
+| F1 TV | `https://raw.githubusercontent.com/egwj/Rules/master/Quantumult/Filter/F1_TV.list` |
+| HBO GO | `https://raw.githubusercontent.com/egwj/Rules/master/Quantumult/Filter/HBO_GO.list` |
+| HBO Max | `https://raw.githubusercontent.com/egwj/Rules/master/Quantumult/Filter/HBO_Max.list` |
+| KKBOX | `https://raw.githubusercontent.com/egwj/Rules/master/Quantumult/Filter/KKBOX.list` |
+| MEGOGO | `https://raw.githubusercontent.com/egwj/Rules/master/Quantumult/Filter/MEGOGO.list` |
+| MUBI | `https://raw.githubusercontent.com/egwj/Rules/master/Quantumult/Filter/MUBI.list` |
+| Openclash | `https://raw.githubusercontent.com/egwj/Rules/master/Quantumult/Filter/Openclash.list` |
+| Paramount+ | `https://raw.githubusercontent.com/egwj/Rules/master/Quantumult/Filter/Paramount%2B.list` |
+| STARZ & STARZPLAY | `https://raw.githubusercontent.com/egwj/Rules/master/Quantumult/Filter/STARZ%26STARZPLAY.list` |
+| Setanta Sports | `https://raw.githubusercontent.com/egwj/Rules/master/Quantumult/Filter/Setantasports.list` |
+| Sky CH | `https://raw.githubusercontent.com/egwj/Rules/master/Quantumult/Filter/SkyCH.list` |
+| SkyShowtime | `https://raw.githubusercontent.com/egwj/Rules/master/Quantumult/Filter/SkyShowtime.list` |
+| SSport Plus | `https://raw.githubusercontent.com/egwj/Rules/master/Quantumult/Filter/Ssportplus.list` |
+| Star+ | `https://raw.githubusercontent.com/egwj/Rules/master/Quantumult/Filter/Star%2B.list` |
+| Streaming AU | `https://raw.githubusercontent.com/egwj/Rules/master/Quantumult/Filter/StreamingAU.list` |
+| Streaming HK | `https://raw.githubusercontent.com/egwj/Rules/master/Quantumult/Filter/StreamingHK.list` |
+| Streaming JP | `https://raw.githubusercontent.com/egwj/Rules/master/Quantumult/Filter/StreamingJP.list` |
+| Streaming KR | `https://raw.githubusercontent.com/egwj/Rules/master/Quantumult/Filter/StreamingKR.list` |
+| Streaming TW | `https://raw.githubusercontent.com/egwj/Rules/master/Quantumult/Filter/StreamingTW.list` |
+| Streaming UK | `https://raw.githubusercontent.com/egwj/Rules/master/Quantumult/Filter/StreamingUK.list` |
+| Streaming US | `https://raw.githubusercontent.com/egwj/Rules/master/Quantumult/Filter/StreamingUS.list` |
+| Viu | `https://raw.githubusercontent.com/egwj/Rules/master/Quantumult/Filter/Viu.list` |
+| iLook.tv | `https://raw.githubusercontent.com/egwj/Rules/master/Quantumult/Filter/ilook.tv.list` |
+| OneFootball | `https://raw.githubusercontent.com/egwj/Rules/master/Quantumult/Filter/onefootball.list` |
 
----
+### sing-box
 
-## 如何添加或修改规则
+将地址填入 sing-box 的 `route.rule_set`，推荐使用 `.srs` 二进制格式。
 
-1. 打开 `Surge/RULE-SET/` 下对应的 `.list` 文件
-2. 按 Surge 规则格式添加一行，例如：
-   ```
-   DOMAIN-SUFFIX,example.com
-   DOMAIN-KEYWORD,example
-   IP-CIDR,1.2.3.4/24
-   ```
-3. 保存文件，commit 并 push 到 GitHub
-4. Actions 会在几分钟内自动将改动同步到 Clash 和 QX 格式
+| 规则 | .srs（推荐） | .json（源文件） |
+|------|-------------|-----------------|
+| Britbox | `…/sing-box/Britbox.srs` | `…/sing-box/source/Britbox.json` |
+| Disney+ | `…/sing-box/Disney+.srs` | `…/sing-box/source/Disney+.json` |
+| Streaming US | `…/sing-box/StreamingUS.srs` | `…/sing-box/source/StreamingUS.json` |
+| … | 其余规则同理，文件名与 Clash 一致 | |
 
----
+> Base URL: `https://raw.githubusercontent.com/egwj/Rules/master/`
 
-## 自动同步说明
+**用法示例：**
+```json
+{
+  "tag": "Disney+",
+  "type": "remote",
+  "format": "binary",
+  "url": "https://raw.githubusercontent.com/egwj/Rules/master/sing-box/Disney+.srs"
+}
+```
 
-| Workflow | 触发条件 | 生成内容 |
-|----------|----------|----------|
-| Sync Rules | `Surge/RULE-SET/` 有改动，或每天 UTC 00:00 | `Clash/RuleSet/`、`Quantumult/X/Filter/` |
-| Sync Config | `Surge/Profile.conf` 有改动 | `Clash/Sample.yaml`、`Surge/Balloon.lcf`（Loon）、`Quantumult/Sample.conf` |
-| Sync Modules | 定时或手动触发 | `Surge/Module/` |
+> sing-box 规则由 GitHub Actions 自动从现有规则转换生成，首次运行后即可使用。
