@@ -5,6 +5,8 @@ on:
 
 permissions:
   contents: read
+env:
+  SUB_REPO: egwj/Sub
 
 jobs:
   sync:
@@ -70,13 +72,23 @@ jobs:
           curl -sS -w "\nHTTP %{http_code}\n" -o "Loon/Sub.conf" \
             "${BASE}?target=loon&url=${ESUB}&config=${ECFG}" || true
 
-      - name: Upload configs as artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: subscription-configs
-          path: |
-            Surge/Sub.conf
-            Clash/Sub.yaml
-            Quantumult/X/Sub.conf
-            Loon/Sub.conf
-          retention-days: 7
+      - name: Push to private repo
+        env:
+          TOKEN: ${{ secrets.SUB_REPO_TOKEN }}
+        run: |
+          git clone --depth=1 "https://x-access-token:${TOKEN}@github.com/${SUB_REPO}.git" /tmp/sub-repo
+          mkdir -p /tmp/sub-repo/Surge /tmp/sub-repo/Clash /tmp/sub-repo/Quantumult/X /tmp/sub-repo/Loon
+          cp Surge/Sub.conf     /tmp/sub-repo/Surge/Sub.conf
+          cp Clash/Sub.yaml     /tmp/sub-repo/Clash/Sub.yaml
+          cp Quantumult/X/Sub.conf /tmp/sub-repo/Quantumult/X/Sub.conf
+          cp Loon/Sub.conf      /tmp/sub-repo/Loon/Sub.conf
+          cd /tmp/sub-repo
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "chore: sync subscription [$(date -u '+%Y-%m-%d %H:%M UTC')]"
+            git push
+          fi
