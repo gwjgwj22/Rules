@@ -1,12 +1,55 @@
 # Rules
 
-自用流媒体代理分流规则。以 Surge 格式手动维护，由 GitHub Actions 自动转换为 Clash、Quantumult X 和 sing-box 格式。
-
-> 只在 `Surge/RULE-SET/` 里改内容，其余文件自动生成。
+个人代理分流规则与配置。以 Surge 格式手动维护，由 GitHub Actions 自动转换并同步到 Clash、Quantumult X、Loon、Surfboard 和 sing-box。
 
 ---
 
-## 订阅地址
+## 目录结构
+
+```
+Rules/
+├── Surge/
+│   ├── RULE-SET/       ← 手动维护规则（唯一需要编辑的地方）
+│   ├── Profile.conf    ← 手动维护主配置
+│   ├── Module/         ← 模块（BlockAdsBase 手动维护，BlockAds 自动生成）
+│   ├── Balloon.lcf     ← 自动生成（Loon）
+│   └── Surfboard.conf  ← 自动生成
+├── Clash/
+│   ├── RuleSet/        ← 自动生成
+│   └── Sample.yaml     ← 自动生成
+├── Quantumult/
+│   ├── Filter/         ← 自动生成
+│   └── Sample.conf     ← 自动生成
+└── sing-box/
+    ├── source/         ← 自动生成（.json）
+    └── *.srs           ← 自动生成（编译后二进制）
+```
+
+> 只需编辑 `Surge/RULE-SET/` 和 `Surge/Profile.conf`，其余文件由 Actions 自动生成。
+
+---
+
+## 主配置订阅
+
+| 客户端 | 订阅地址 |
+|--------|----------|
+| Surge | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/Profile.conf` |
+| Clash | `https://raw.githubusercontent.com/egwj/Rules/master/Clash/Sample.yaml` |
+| Quantumult X | `https://raw.githubusercontent.com/egwj/Rules/master/Quantumult/Sample.conf` |
+| Loon | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/Balloon.lcf` |
+| Surfboard | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/Surfboard.conf` |
+
+---
+
+## 模块订阅
+
+| 模块 | 订阅地址 |
+|------|----------|
+| BlockAds（合并去广告） | `https://raw.githubusercontent.com/egwj/Rules/master/Surge/Module/BlockAds.sgmodule` |
+
+---
+
+## 规则集订阅
 
 ### Clash
 
@@ -90,17 +133,8 @@
 
 ### sing-box
 
-填入 `route.rule_set`，推荐 `.srs` 二进制格式。
+填入 `route.rule_set`，推荐 `.srs` 二进制格式。Base URL：`https://raw.githubusercontent.com/egwj/Rules/master/sing-box/`，文件名与 `Surge/RULE-SET/` 一致。
 
-| 规则 | .srs（推荐） |
-|------|-------------|
-| Disney+ | `https://raw.githubusercontent.com/egwj/Rules/master/sing-box/Disney%2B.srs` |
-| Streaming US | `https://raw.githubusercontent.com/egwj/Rules/master/sing-box/StreamingUS.srs` |
-| … | 其余规则同理，文件名与 Surge/RULE-SET 一致 |
-
-> Base URL: `https://raw.githubusercontent.com/egwj/Rules/master/sing-box/`
-
-**用法示例：**
 ```json
 {
   "tag": "Disney+",
@@ -116,4 +150,6 @@
 
 | Workflow | 触发条件 | 生成内容 |
 |----------|----------|----------|
-| Sync Rules | `Surge/RULE-SET/` 有改动，或每天 UTC 16:00 | `Clash/RuleSet/*.yaml`、`Quantumult/Filter/*.list`、`sing-box/source/*.json`、`sing-box/*.srs` |
+| Sync Rules | `Surge/RULE-SET/` 有改动，或每天 UTC 16:00 | `Clash/RuleSet/*.yaml`、`Quantumult/Filter/*.list`、`sing-box/` |
+| Sync Config | `Surge/Profile.conf` 有改动 | `Clash/Sample.yaml`、`Quantumult/Sample.conf`、`Surge/Balloon.lcf`、`Surge/Surfboard.conf` |
+| Sync Modules | `Surge/Module/` 有改动，或每天 UTC 16:00 | `Surge/Module/BlockAds.sgmodule` |
