@@ -35,12 +35,6 @@ Apple TV
 # > Mapping
 VirgilClyne/GetSomeFries =>
 Loyalsoldier/surge-rules => Loyalsoldier/clash-rules
-# > ExtraUse
-Degyax
-Nexitally
-TAG
-FlowerCloud
-ROR
 # > Rename
 rule-providers:
   AD => Advertising
