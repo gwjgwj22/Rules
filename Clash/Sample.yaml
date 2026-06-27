@@ -1,5 +1,5 @@
 # Clash
-# Date: 2026-06-25 18:17:26
+# Date: 2026-06-27 23:10:38
 # Author: @egwj
 
 # 通用设置
@@ -299,7 +299,7 @@ proxy-providers:
   Server:
     type: http
     path: ./Provider/Proxy/Server.yaml
-    url: https://sub.hotkids.me
+    # url: https://sub.hotkids.me
     interval: 3600
     proxy: DIRECT
     header:
@@ -337,6 +337,7 @@ proxy-groups:
       - 🇵🇹 Portugal
       - 🇳🇬 Nigeria
       - 🇰🇷 Korea
+      - 🇲🇴 Macau
       - 🇦🇺 Australia
       - 🇵🇭 Philippines
       - 🇲🇾 Malaysia
@@ -639,7 +640,7 @@ rule-providers:
     type: http
     behavior: classical
     path: ./Provider/RuleSet/Unbreak.yaml
-    url: https://testingcf.jsdelivr.net/gh/HotKids/Rules@master/Clash/RuleSet/Unbreak.yaml
+    url: https://testingcf.jsdelivr.net/gh/egwj/Rules@master/Clash/RuleSet/Unbreak.yaml
     interval: 86400
 
   Private:
@@ -667,119 +668,119 @@ rule-providers:
     type: http
     behavior: classical
     path: ./Provider/RuleSet/Advertising.yaml
-    url: https://testingcf.jsdelivr.net/gh/HotKids/Rules@master/Clash/RuleSet/AD.yaml
+    url: https://testingcf.jsdelivr.net/gh/egwj/Rules@master/Clash/RuleSet/AD.yaml
     interval: 86400
 
   Streaming_TW:
     type: http
     behavior: classical
     path: ./Provider/RuleSet/Streaming_TW.yaml
-    url: https://testingcf.jsdelivr.net/gh/HotKids/Rules@master/Clash/RuleSet/Streaming_TW.yaml
+    url: https://testingcf.jsdelivr.net/gh/egwj/Rules@master/Clash/RuleSet/Streaming_TW.yaml
     interval: 86400
 
   Streaming_JP:
     type: http
     behavior: classical
     path: ./Provider/RuleSet/Streaming_JP.yaml
-    url: https://testingcf.jsdelivr.net/gh/HotKids/Rules@master/Clash/RuleSet/Streaming_JP.yaml
+    url: https://testingcf.jsdelivr.net/gh/egwj/Rules@master/Clash/RuleSet/Streaming_JP.yaml
     interval: 86400
 
   Streaming_US:
     type: http
     behavior: classical
     path: ./Provider/RuleSet/Streaming_US.yaml
-    url: https://testingcf.jsdelivr.net/gh/HotKids/Rules@master/Clash/RuleSet/Streaming_US.yaml
+    url: https://testingcf.jsdelivr.net/gh/egwj/Rules@master/Clash/RuleSet/Streaming_US.yaml
     interval: 86400
 
   Streaming:
     type: http
     behavior: classical
     path: ./Provider/RuleSet/Streaming.yaml
-    url: https://testingcf.jsdelivr.net/gh/HotKids/Rules@master/Clash/RuleSet/Streaming.yaml
+    url: https://testingcf.jsdelivr.net/gh/egwj/Rules@master/Clash/RuleSet/Streaming.yaml
     interval: 86400
 
   CNTV:
     type: http
     behavior: classical
     path: ./Provider/RuleSet/CNTV.yaml
-    url: https://testingcf.jsdelivr.net/gh/HotKids/Rules@master/Clash/RuleSet/CNTV.yaml
+    url: https://testingcf.jsdelivr.net/gh/egwj/Rules@master/Clash/RuleSet/CNTV.yaml
     interval: 86400
 
   Google AI Studio:
     type: http
     behavior: classical
     path: ./Provider/RuleSet/Google_AI_Studio.yaml
-    url: https://testingcf.jsdelivr.net/gh/HotKids/Rules@master/Clash/RuleSet/Gemini.yaml
+    url: https://testingcf.jsdelivr.net/gh/egwj/Rules@master/Clash/RuleSet/Gemini.yaml
     interval: 86400
 
   AIGC:
     type: http
     behavior: classical
     path: ./Provider/RuleSet/AIGC.yaml
-    url: https://testingcf.jsdelivr.net/gh/HotKids/Rules@master/Clash/RuleSet/GenAI.yaml
+    url: https://testingcf.jsdelivr.net/gh/egwj/Rules@master/Clash/RuleSet/GenAI.yaml
     interval: 86400
 
   Apple CN:
     type: http
     behavior: classical
     path: ./Provider/RuleSet/Apple_CN.yaml
-    url: https://testingcf.jsdelivr.net/gh/HotKids/Rules@master/Clash/RuleSet/Apple%20CN.yaml
+    url: https://testingcf.jsdelivr.net/gh/egwj/Rules@master/Clash/RuleSet/Apple%20CN.yaml
     interval: 86400
 
   Apple:
     type: http
     behavior: classical
     path: ./Provider/RuleSet/Apple.yaml
-    url: https://testingcf.jsdelivr.net/gh/HotKids/Rules@master/Clash/RuleSet/Apple.yaml
+    url: https://testingcf.jsdelivr.net/gh/egwj/Rules@master/Clash/RuleSet/Apple.yaml
     interval: 86400
 
   Crypto:
     type: http
     behavior: classical
     path: ./Provider/RuleSet/Crypto.yaml
-    url: https://testingcf.jsdelivr.net/gh/HotKids/Rules@master/Clash/RuleSet/Crypto.yaml
+    url: https://testingcf.jsdelivr.net/gh/egwj/Rules@master/Clash/RuleSet/Crypto.yaml
     interval: 86400
 
   Google:
     type: http
     behavior: classical
     path: ./Provider/RuleSet/Google.yaml
-    url: https://testingcf.jsdelivr.net/gh/HotKids/Rules@master/Clash/RuleSet/Google.yaml
+    url: https://testingcf.jsdelivr.net/gh/egwj/Rules@master/Clash/RuleSet/Google.yaml
     interval: 86400
 
   Credit:
     type: http
     behavior: classical
     path: ./Provider/RuleSet/Credit.yaml
-    url: https://testingcf.jsdelivr.net/gh/HotKids/Rules@master/Clash/RuleSet/Credit.yaml
+    url: https://testingcf.jsdelivr.net/gh/egwj/Rules@master/Clash/RuleSet/Credit.yaml
     interval: 86400
 
   PayPal:
     type: http
     behavior: classical
     path: ./Provider/RuleSet/PayPal.yaml
-    url: https://testingcf.jsdelivr.net/gh/HotKids/Rules@master/Clash/RuleSet/PayPal.yaml
+    url: https://testingcf.jsdelivr.net/gh/egwj/Rules@master/Clash/RuleSet/PayPal.yaml
     interval: 86400
 
   Telegram:
     type: http
     behavior: classical
     path: ./Provider/RuleSet/Telegram.yaml
-    url: https://testingcf.jsdelivr.net/gh/HotKids/Rules@master/Clash/RuleSet/Telegram.yaml
+    url: https://testingcf.jsdelivr.net/gh/egwj/Rules@master/Clash/RuleSet/Telegram.yaml
     interval: 86400
 
   Spark:
     type: http
     behavior: classical
     path: ./Provider/RuleSet/Spark.yaml
-    url: https://testingcf.jsdelivr.net/gh/HotKids/Rules@master/Clash/RuleSet/Spark.yaml
+    url: https://testingcf.jsdelivr.net/gh/egwj/Rules@master/Clash/RuleSet/Spark.yaml
     interval: 86400
 
   Proxy:
     type: http
     behavior: classical
     path: ./Provider/RuleSet/Proxy.yaml
-    url: https://testingcf.jsdelivr.net/gh/HotKids/Rules@master/Clash/RuleSet/Proxy.yaml
+    url: https://testingcf.jsdelivr.net/gh/egwj/Rules@master/Clash/RuleSet/Proxy.yaml
     interval: 86400
 
   Global:
@@ -814,7 +815,7 @@ rule-providers:
     type: http
     behavior: ipcidr
     path: ./Provider/RuleSet/LANCIDR.yaml
-    url: https://testingcf.jsdelivr.net/gh/HotKids/Rules@master/Clash/RuleSet/lancidr.txt
+    url: https://testingcf.jsdelivr.net/gh/egwj/Rules@master/Clash/RuleSet/lancidr.txt
     interval: 86400
 
 # 规则
