@@ -1,0 +1,22 @@
+# > Spark Mail
+# 通用 SMTP 端口
+# 明文 SMTP
+# DEST-PORT,25
+# SMTP over SSL (SMTPS)
+# DEST-PORT,465
+# SMTP Submission (STARTTLS)
+# DEST-PORT,587
+USER-AGENT,*spark,Spark
+USER-AGENT,*Spark,Spark
+DOMAIN-SUFFIX,gmail.com,Spark
+DOMAIN-SUFFIX,googlemail.com,Spark
+DOMAIN-SUFFIX,live.com,Spark
+DOMAIN-SUFFIX,outlook.com,Spark
+DOMAIN-SUFFIX,hotmail.com,Spark
+DOMAIN-SUFFIX,mail.me.com,Spark
+DOMAIN-SUFFIX,mail.yahoo.com,Spark
+DOMAIN-SUFFIX,fastmail.com,Spark
+DOMAIN-SUFFIX,mail.infomaniak.com,Spark
+DOMAIN-SUFFIX,vodafonemail.de,Spark
+DOMAIN,imap.vodafone.de,Spark
+DOMAIN,smtp.vodafone.de,Spark

@@ -1,0 +1,353 @@
+# > AbemaTV
+USER-AGENT,AbemaTV*,Streaming
+DOMAIN-SUFFIX,abema.io,Streaming
+DOMAIN-SUFFIX,abema.tv,Streaming
+DOMAIN-SUFFIX,ameba.jp,Streaming
+DOMAIN-SUFFIX,hayabusa.io,Streaming
+DOMAIN,abematv.akamaized.net,Streaming
+DOMAIN,ds-vod-abematv.akamaized.net,Streaming
+DOMAIN,linear-abematv.akamaized.net,Streaming
+DOMAIN,ds-linear-abematv.akamaized.net,Streaming
+
+# > BBC iPlayer
+USER-AGENT,BBCiPlayer*,Streaming
+DOMAIN-KEYWORD,bbcfmt,Streaming
+DOMAIN-KEYWORD,uk-live,Streaming
+DOMAIN-SUFFIX,bbc.com,Streaming
+DOMAIN-SUFFIX,bbc.co.uk,Streaming
+DOMAIN-SUFFIX,bbci.co.uk,Streaming
+DOMAIN,ssl-bbcsmarttv.2cnt.net,Streaming
+DOMAIN,vod-dash-uk-live.akamaized.net,Streaming
+DOMAIN,vod-thumb-uk-live.akamaized.net,Streaming
+DOMAIN,vod-dash-uk-live.bbcfmt.hs.llnwd.net,Streaming
+DOMAIN,vod-thumb-uk-live.bbcfmt.hs.llnwd.net,Streaming
+
+# > Bahamut
+USER-AGENT,Anime*,Streaming
+DOMAIN-SUFFIX,bahamut.com.tw,Streaming
+DOMAIN-SUFFIX,gamer.com.tw,Streaming
+DOMAIN,gamer-cds.cdn.hinet.net,Streaming
+DOMAIN,gamer2-cds.cdn.hinet.net,Streaming
+
+# > Britbox
+USER-AGENT,Britbox*,Streaming
+DOMAIN-SUFFIX,britbox.com,Streaming
+DOMAIN-SUFFIX,bbc.co.uk,Streaming
+DOMAIN,d2z3p34itxwaj7.cloudfront.net,Streaming
+
+# > CATCHPLAY+
+USER-AGENT,CATCHPLAY*,Streaming
+DOMAIN-SUFFIX,catchplay.com,Streaming
+DOMAIN,asiaplay-origin.s3.amazonaws.com,Streaming
+DOMAIN,tra-ww000-cp.akamaized.net,Streaming
+DOMAIN,ols-ww000-cp.akamaized.net,Streaming
+DOMAIN,ols-ww100-cp.akamaized.net,Streaming
+DOMAIN,dkfhw9rzsr80z.cloudfront.net,Streaming
+
+# > Crunchyroll
+USER-AGENT,Crunchyroll*,Streaming
+DOMAIN-SUFFIX,crunchyroll.com,Streaming
+# 如需使用 VRV，请将此条取消注释并走 US 代理
+# DOMAIN-SUFFIX,vrv.co
+
+# > DAZN
+USER-AGENT,DAZN*,Streaming
+DOMAIN-SUFFIX,dazn.com,Streaming
+DOMAIN-SUFFIX,dazndn.com,Streaming
+DOMAIN-SUFFIX,indazn.com,Streaming
+DOMAIN-SUFFIX,indaznlab.com,Streaming
+DOMAIN-SUFFIX,dazn-api.com,Streaming
+DOMAIN,d151l6v8er5bdm.cloudfront.net,Streaming
+DOMAIN-KEYWORD,voddazn,Streaming
+
+# > Discovery+
+USER-AGENT,discovery+*,Streaming
+USER-AGENT,*DPlus*,Streaming
+DOMAIN-SUFFIX,discoveryplus.com,Streaming
+DOMAIN-SUFFIX,disco-api.com,Streaming
+DOMAIN-SUFFIX,dnitv.com,Streaming
+DOMAIN-SUFFIX,dplus.us.prd.media.max.com,Streaming
+DOMAIN-SUFFIX,dplus-amer.prd.api.discomax.com,Streaming
+# DOMAIN,default.any-any.prd.api.discomax.com // 会影响 HBO Max
+DOMAIN,us1-prod.disco-api.com,Streaming
+DOMAIN,us1-prod-images.disco-api.com,Streaming
+DOMAIN,kvinit-prod.api.kochava.com,Streaming
+DOMAIN,4unal8ngvngjm07lj2q2umlc4.litix.io,Streaming
+DOMAIN,content-ause1-ur-discovery1.uplynk.com,Streaming
+DOMAIN,content-ausw1-ur-discovery1.uplynk.com,Streaming
+DOMAIN,content-ausw2-ur-discovery1.uplynk.com,Streaming
+# DOMAIN,go-prod-vz.akamaized.net
+
+# > Disney+
+USER-AGENT,Disney*,Streaming
+DOMAIN-SUFFIX,disneyplus.com,Streaming
+DOMAIN-SUFFIX,disney-plus.net,Streaming
+DOMAIN-SUFFIX,disneystreaming.com,Streaming
+DOMAIN-SUFFIX,dssott.com,Streaming
+# DOMAIN-SUFFIX,bamgrid.com
+DOMAIN,playback-certs.bamgrid.com,Streaming
+DOMAIN,disney.api.edge.bamgrid.com,Streaming
+DOMAIN,disney.connections.edge.bamgrid.com,Streaming
+DOMAIN,disney.content.edge.bamgrid.com,Streaming
+DOMAIN,disney.playback.edge.bamgrid.com,Streaming
+DOMAIN,cdn.registerdisney.go.com,Streaming
+DOMAIN-SUFFIX,execute-api.us-east-1.amazonaws.com,Streaming
+
+# > FOD
+USER-AGENT,FOD*,Streaming
+DOMAIN-SUFFIX,fujitv.co.jp,Streaming
+DOMAIN-SUFFIX,stream.ne.jp,Streaming
+DOMAIN,measure.ic.tver.jp,Streaming
+
+# > HBO Max
+USER-AGENT,HBOMAX*,Streaming
+USER-AGENT,Max*,Streaming
+DOMAIN-SUFFIX,max.com,Streaming
+DOMAIN-SUFFIX,hbomax.com,Streaming
+DOMAIN-SUFFIX,discomax.com,Streaming
+
+# > Hulu
+DOMAIN-SUFFIX,hulu.com,Streaming
+DOMAIN-SUFFIX,hulu.tv,Streaming
+DOMAIN-SUFFIX,huluim.com,Streaming
+DOMAIN-SUFFIX,hulustream.com,Streaming
+DOMAIN,cws-hulu.conviva.com,Streaming
+# DOMAIN,assetshuluimcom-a.akamaihd.net
+
+# > Hulu JP
+DOMAIN-SUFFIX,hulu.jp,Streaming
+DOMAIN-SUFFIX,happyon.jp,Streaming
+DOMAIN-SUFFIX,prod.hjholdings.tv,Streaming
+
+# > IQ
+USER-AGENT,iQIYI*,Streaming
+USER-AGENT,QIYIVideo*,Streaming
+USER-AGENT,QYPlayer*,Streaming
+USER-AGENT,QTP*,Streaming
+DOMAIN-SUFFIX,iq.com,Streaming
+# 首页
+DOMAIN-SUFFIX,intl.iqiyi.com,Streaming
+# 历史
+DOMAIN,intl-rcd.iqiyi.com,Streaming
+DOMAIN,intl-im-hist-api.iqiyi.com,Streaming
+# 收藏
+DOMAIN,intl-subscription.iqiyi.com,Streaming
+# 播放
+DOMAIN,msg-intl.qy.net,Streaming
+DOMAIN,ip.geo.iqiyi.com,Streaming
+DOMAIN,akcdnoversea.inter.71edge.com,Streaming
+DOMAIN,akmcdnoversea.inter.iqiyi.com,Streaming
+DOMAIN,akmcdnoversea.inter.ptqy.gitv.tv,Streaming
+DOMAIN,chuangcachecdnoversea.inter.iqiyi.com,Streaming
+DOMAIN,chuangcachecdnoversea.inter.ptqy.gitv.tv,Streaming
+DOMAIN,akmcdnoversea-tw.inter.iqiyi.com,Streaming
+DOMAIN,akmcdnoversea-tw.inter.ptqy.gitv.tv,Streaming
+DOMAIN,chuangcachecdnoversea-tw.inter.iqiyi.com,Streaming
+DOMAIN,chuangcachecdnoversea-tw.inter.ptqy.gitv.tv,Streaming
+DOMAIN-KEYWORD,akmcdnoverse,Streaming
+DOMAIN-KEYWORD,chuangcachecdnoversea,Streaming
+IP-CIDR,2.21.22.17/32,Streaming,no-resolve
+IP-CIDR,23.40.241.251/32,Streaming,no-resolve
+IP-CIDR,23.40.242.10/32,Streaming,no-resolve
+IP-CIDR,23.210.215.154/32,Streaming,no-resolve
+IP-CIDR,110.238.107.47/32,Streaming,no-resolve
+IP-CIDR,110.238.109.184/32,Streaming,no-resolve
+IP-CIDR,114.119.175.88/32,Streaming,no-resolve
+IP-CIDR,118.26.32.0/22,Streaming,no-resolve
+IP-CIDR,159.138.102.146/32,Streaming,no-resolve
+IP-CIDR,184.25.254.178/32,Streaming,no-resolve
+IP-CIDR,203.80.97.208/32,Streaming,no-resolve
+IP-CIDR,203.198.80.99/32,Streaming,no-resolve
+
+# > KKBOX
+USER-AGENT,*KKBOX,Streaming
+DOMAIN-SUFFIX,kkbox.com,Streaming
+DOMAIN-SUFFIX,kkbox.com.tw,Streaming
+DOMAIN-SUFFIX,kfs.io,Streaming
+
+# > LINE TV
+USER-AGENT,LINE%20TV*,Streaming
+DOMAIN-SUFFIX,linetv.tw,Streaming
+DOMAIN-SUFFIX,chocotv.com.tw,Streaming
+DOMAIN-SUFFIX,kktv.me,Streaming
+DOMAIN-SUFFIX,kktv.com.tw,Streaming
+DOMAIN,kktv-theater.kk.stream,Streaming
+DOMAIN,theater-kktv.cdn.hinet.net,Streaming
+DOMAIN,d17lx9ucc6k9fc.cloudfront.net,Streaming
+DOMAIN,d3c7rimkq79yfu.cloudfront.net,Streaming
+DOMAIN,d36dgdk71xuzzg.cloudfront.net,Streaming
+
+# > MGM+
+DOMAIN-SUFFIX,mgmplus.com,Streaming
+DOMAIN-SUFFIX,epix.com,Streaming
+DOMAIN-SUFFIX,epixnow.com,Streaming
+DOMAIN,epixhls.akamaized.net,Streaming
+DOMAIN,us-ore-00001.s3.dualstack.us-west-2.amazonaws.com,Streaming
+
+# > MUBI
+DOMAIN-SUFFIX,mubi.com,Streaming
+DOMAIN-SUFFIX,mubicdn.net,Streaming
+
+# > Netflix
+USER-AGENT,Argo*,Streaming
+DOMAIN-SUFFIX,netflix.com,Streaming
+DOMAIN-SUFFIX,netflix.net,Streaming
+DOMAIN-SUFFIX,nflxext.com,Streaming
+DOMAIN-SUFFIX,nflximg.com,Streaming
+DOMAIN-SUFFIX,nflximg.net,Streaming
+DOMAIN-SUFFIX,nflxso.net,Streaming
+DOMAIN-SUFFIX,nflxvideo.net,Streaming
+DOMAIN-KEYWORD,netflixdnstest,Streaming
+DOMAIN-KEYWORD,dualstack.apiproxy-,Streaming
+DOMAIN-KEYWORD,dualstack.ichnaea-web-,Streaming
+IP-CIDR,23.246.0.0/18,Streaming,no-resolve
+IP-CIDR,34.210.42.111/32,Streaming,no-resolve
+IP-CIDR,37.77.184.0/21,Streaming,no-resolve
+IP-CIDR,45.57.0.0/17,Streaming,no-resolve
+IP-CIDR,52.89.124.203/32,Streaming,no-resolve
+IP-CIDR,54.148.37.5/32,Streaming,no-resolve
+IP-CIDR,64.120.128.0/17,Streaming,no-resolve
+IP-CIDR,66.197.128.0/17,Streaming,no-resolve
+IP-CIDR,108.175.32.0/20,Streaming,no-resolve
+IP-CIDR,192.173.64.0/18,Streaming,no-resolve
+IP-CIDR,198.38.96.0/19,Streaming,no-resolve
+IP-CIDR,198.45.48.0/20,Streaming,no-resolve
+
+# > PBS
+USER-AGENT,PBS*,Streaming
+DOMAIN-SUFFIX,pbs.org,Streaming
+
+# > Paramount+
+# US UA
+USER-AGENT,PPlus*,Streaming
+# Intl. UA
+USER-AGENT,ParamountPlus*,Streaming
+DOMAIN-SUFFIX,cbsi.com,Streaming
+# DOMAIN-SUFFIX,cbsaavideo.com #播放
+DOMAIN-SUFFIX,cbsivideo.com,Streaming
+DOMAIN-SUFFIX,paramountplus.com,Streaming
+DOMAIN-SUFFIX,pplusstatic.com,Streaming
+# DOMAIN-SUFFIX,mtvnservices.com #MTV
+# DOMAIN-SUFFIX,cws.conviva.com
+DOMAIN,link.theplatform.com,Streaming
+# US
+# Intl.
+# 播放验证，此条 Paramount+ 国际版与美国版共用，可使用 AND 语法区分。iOS 15 下 UA 不可用需 MITM 相关 HOST
+DOMAIN,cbsi.live.ott.irdeto.com,Streaming
+# DOMAIN,thumbnails.cbsig.net #缩略图
+# DOMAIN,cbsinteractive.hb.omtrdc.net
+# DOMAIN,ads.play.cbsi.video #片头动画，可屏蔽
+# DOMAIN,pubads.g.doubleclick.net #不可屏蔽
+# DOMAIN,cbsnews.akamaized.net #CBSN Live
+# CBS live丨US
+DOMAIN,cbsservice.aws.syncbak.com,Streaming
+DOMAIN,cbsplaylistserver.aws.syncbak.com,Streaming
+
+# > Paravi
+USER-AGENT,Paravi*,Streaming
+DOMAIN-SUFFIX,paravi.jp,Streaming
+
+# > Peacock
+USER-AGENT,peacock*,Streaming
+DOMAIN-SUFFIX,cdn.peacocktv.com,Streaming
+DOMAIN-SUFFIX,peacocktv.com,Streaming
+# 屏蔽广告
+# DOMAIN,video-ads-module.ad-tech.nbcuni.com
+
+# > Prime Video
+# USER-AGENT,InstantVideo.US*
+# USER-AGENT,Prime%20Video*
+DOMAIN-SUFFIX,primevideo.com,Streaming
+DOMAIN-SUFFIX,amazonvideo.com,Streaming
+DOMAIN-SUFFIX,media-amazon.com,Streaming
+DOMAIN-SUFFIX,pv-cdn.net,Streaming
+DOMAIN-SUFFIX,aiv-cdn.net,Streaming
+DOMAIN-SUFFIX,aiv-delivery.net,Streaming
+# DOMAIN,www.amazon.com
+DOMAIN,ktpx.amazon.com,Streaming
+DOMAIN,atv-ps.amazon.com,Streaming
+DOMAIN,avodmp4s3ww-a.akamaihd.net,Streaming
+# DOMAIN,d184dfn36gombl.cloudfront.net
+# DOMAIN,d1xfray82862hr.cloudfront.net
+# DOMAIN,d1v5ir2lpwr8os.cloudfront.net
+# DOMAIN,d22qjgkvxw22r6.cloudfront.net
+# DOMAIN,d25xi40x97liuc.cloudfront.net
+# DOMAIN,d27xxe7juh1us6.cloudfront.net
+# DOMAIN,d3196yreox78o9.cloudfront.net
+# DOMAIN,dmqdd6hw24ucf.cloudfront.net
+DOMAIN-KEYWORD,avoddashs,Streaming
+
+# 美区网页版需二选一走代理,如 URL-REGEX 则需 MITM www.amazon.com
+# DOMAIN,www.amazon.com
+
+# > Roku
+DOMAIN-SUFFIX,roku.com,Streaming
+DOMAIN-SUFFIX,rokutime.com,Streaming
+
+# > SBS
+USER-AGENT,SBS*,Streaming
+DOMAIN-SUFFIX,sbsod.com,Streaming
+DOMAIN-SUFFIX,sbs.com.au,Streaming
+# DOMAIN,sbsvoddai-vh.akamaihd.net
+
+# > Spotify
+USER-AGENT,*Spotify*,Streaming
+DOMAIN-SUFFIX,pscdn.co,Streaming
+DOMAIN-SUFFIX,scdn.co,Streaming
+DOMAIN-SUFFIX,spoti.fi,Streaming
+DOMAIN-SUFFIX,spotify.com,Streaming
+DOMAIN-SUFFIX,spotifycdn.com,Streaming
+DOMAIN-SUFFIX,spotifycdn.net,Streaming
+DOMAIN-SUFFIX,spotifycharts.com,Streaming
+DOMAIN-SUFFIX,spotifycodes.com,Streaming
+DOMAIN-SUFFIX,spotifyjobs.com,Streaming
+DOMAIN-SUFFIX,spotifynewsroom.jp,Streaming
+DOMAIN-SUFFIX,spotilocal.com,Streaming
+DOMAIN-SUFFIX,tospotify.com,Streaming
+
+# > Stan
+USER-AGENT,Stan*,Streaming
+DOMAIN-SUFFIX,stan.com.au,Streaming
+DOMAIN,aws.stan.video,Streaming
+# DOMAIN,streamcoimg-a.akamaihd.net
+
+# > TVBAnywhere
+DOMAIN-SUFFIX,tvb.com,Streaming
+DOMAIN-KEYWORD,tvbanywhere,Streaming
+
+# > TVer
+DOMAIN-SUFFIX,tver.jp,Streaming
+DOMAIN-SUFFIX,interactive-circle.jp,Streaming
+DOMAIN-SUFFIX,brightcove.com,Streaming
+DOMAIN-SUFFIX,prod.boltdns.net,Streaming
+# DOMAIN,fod-cm-ad-v.webcdn.stream.ne.jp //广告
+
+# > U-NEXT
+DOMAIN-SUFFIX,unext.jp,Streaming
+DOMAIN-SUFFIX,nxtv.jp,Streaming
+# DOMAIN,streamd01ca-nxtv-jp.akamaized.net
+DOMAIN,us-central1-u-next-apps.cloudfunctions.net,Streaming
+
+# > YouTube
+USER-AGENT,*YouTube*,Streaming
+USER-AGENT,*youtube*,Streaming
+DOMAIN-SUFFIX,youtu.be,Streaming
+DOMAIN-SUFFIX,googlevideo.com,Streaming
+DOMAIN,youtubei.googleapis.com,Streaming
+DOMAIN-KEYWORD,youtube,Streaming
+
+# > friDay
+USER-AGENT,friDay*,Streaming
+DOMAIN-SUFFIX,friday.tw,Streaming
+DOMAIN-SUFFIX,fridaylogger.com,Streaming
+DOMAIN-SUFFIX,svc.litv.tv,Streaming
+DOMAIN,aka01p.akamaized.net,Streaming
+DOMAIN,aka02p.akamaized.net,Streaming
+DOMAIN,aka36p.akamaized.net,Streaming
+
+# > myVideo
+USER-AGENT,myVideo*,Streaming
+DOMAIN-SUFFIX,myvideo.net.tw,Streaming
+DOMAIN-SUFFIX,catch.net.tw,Streaming
+DOMAIN,applemediaservice.keydelivery.southeastasia.media.azure.net,Streaming
+DOMAIN,akamaiendpoint-applemediaservice-aase.streaming.media.azure.net,Streaming

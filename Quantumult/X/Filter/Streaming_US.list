@@ -1,0 +1,61 @@
+# > Crunchyroll
+USER-AGENT,Crunchyroll*,Streaming_US
+DOMAIN-SUFFIX,crunchyroll.com,Streaming_US
+# 如需使用 VRV，请将此条取消注释并走 US 代理
+# DOMAIN-SUFFIX,vrv.co
+
+# > Hulu
+DOMAIN-SUFFIX,hulu.com,Streaming_US
+DOMAIN-SUFFIX,hulu.tv,Streaming_US
+DOMAIN-SUFFIX,huluim.com,Streaming_US
+DOMAIN-SUFFIX,hulustream.com,Streaming_US
+DOMAIN,cws-hulu.conviva.com,Streaming_US
+# DOMAIN,assetshuluimcom-a.akamaihd.net
+
+# > MGM+
+DOMAIN-SUFFIX,mgmplus.com,Streaming_US
+DOMAIN-SUFFIX,epix.com,Streaming_US
+DOMAIN-SUFFIX,epixnow.com,Streaming_US
+DOMAIN,epixhls.akamaized.net,Streaming_US
+DOMAIN,us-ore-00001.s3.dualstack.us-west-2.amazonaws.com,Streaming_US
+
+# > PBS
+USER-AGENT,PBS*,Streaming_US
+DOMAIN-SUFFIX,pbs.org,Streaming_US
+
+# > Paramount+
+# US UA
+USER-AGENT,PPlus*,Streaming_US
+# Intl. UA
+USER-AGENT,ParamountPlus*,Streaming_US
+DOMAIN-SUFFIX,cbsi.com,Streaming_US
+# DOMAIN-SUFFIX,cbsaavideo.com #播放
+DOMAIN-SUFFIX,cbsivideo.com,Streaming_US
+DOMAIN-SUFFIX,paramountplus.com,Streaming_US
+DOMAIN-SUFFIX,pplusstatic.com,Streaming_US
+# DOMAIN-SUFFIX,mtvnservices.com #MTV
+# DOMAIN-SUFFIX,cws.conviva.com
+DOMAIN,link.theplatform.com,Streaming_US
+# US
+# Intl.
+# 播放验证，此条 Paramount+ 国际版与美国版共用，可使用 AND 语法区分。iOS 15 下 UA 不可用需 MITM 相关 HOST
+DOMAIN,cbsi.live.ott.irdeto.com,Streaming_US
+# DOMAIN,thumbnails.cbsig.net #缩略图
+# DOMAIN,cbsinteractive.hb.omtrdc.net
+# DOMAIN,ads.play.cbsi.video #片头动画，可屏蔽
+# DOMAIN,pubads.g.doubleclick.net #不可屏蔽
+# DOMAIN,cbsnews.akamaized.net #CBSN Live
+# CBS live丨US
+DOMAIN,cbsservice.aws.syncbak.com,Streaming_US
+DOMAIN,cbsplaylistserver.aws.syncbak.com,Streaming_US
+
+# > Peacock
+USER-AGENT,peacock*,Streaming_US
+DOMAIN-SUFFIX,cdn.peacocktv.com,Streaming_US
+DOMAIN-SUFFIX,peacocktv.com,Streaming_US
+# 屏蔽广告
+# DOMAIN,video-ads-module.ad-tech.nbcuni.com
+
+# > Roku
+DOMAIN-SUFFIX,roku.com,Streaming_US
+DOMAIN-SUFFIX,rokutime.com,Streaming_US

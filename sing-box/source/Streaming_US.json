@@ -1,0 +1,37 @@
+{
+  "version": 2,
+  "rules": [
+    {
+      "domain": [
+        "cbsi.live.ott.irdeto.com",
+        "cbsplaylistserver.aws.syncbak.com",
+        "cbsservice.aws.syncbak.com",
+        "cws-hulu.conviva.com",
+        "epixhls.akamaized.net",
+        "link.theplatform.com",
+        "us-ore-00001.s3.dualstack.us-west-2.amazonaws.com"
+      ]
+    },
+    {
+      "domain_suffix": [
+        "cbsi.com",
+        "cbsivideo.com",
+        "cdn.peacocktv.com",
+        "crunchyroll.com",
+        "epix.com",
+        "epixnow.com",
+        "hulu.com",
+        "hulu.tv",
+        "huluim.com",
+        "hulustream.com",
+        "mgmplus.com",
+        "paramountplus.com",
+        "pbs.org",
+        "peacocktv.com",
+        "pplusstatic.com",
+        "roku.com",
+        "rokutime.com"
+      ]
+    }
+  ]
+}
