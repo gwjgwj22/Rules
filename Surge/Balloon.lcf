@@ -1,5 +1,5 @@
 # Loon
-# Date: 2026-06-25 18:17:26
+# Date: 2026-06-27 23:10:38
 # Author: @egwj
 
 [General]
@@ -64,7 +64,7 @@ Sub-UN = NameRegex, FilterKey = "^(?=.+)(?!.*(?i)\b(USE(D)?|TOTAL|EXPIRE|RESET|P
 
 [Proxy Group]
 # Proxy
-🔰 Proxy = select,🇭🇰 Hong Kong,🇨🇳 Taiwan,🇸🇬 Singapore,🇯🇵 Japan,🇺🇸 America,🇨🇦 Canada,🇬🇧 United Kingdom,🇩🇪 Germany,🇫🇷 France,🇮🇹 Italy,🇪🇸 Spain,🇵🇹 Portugal,🇳🇬 Nigeria,🇰🇷 Korea,🇦🇺 Australia,🇵🇭 Philippines,🇲🇾 Malaysia,🇹🇭 Thailand,🇧🇷 Brazil,🇦🇷 Argentina,🇨🇱 Chile,🇺🇳 Server,🔘 DIRECT,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Color/Outbound.png
+🔰 Proxy = select,🇭🇰 Hong Kong,🇨🇳 Taiwan,🇸🇬 Singapore,🇯🇵 Japan,🇺🇸 America,🇨🇦 Canada,🇬🇧 United Kingdom,🇩🇪 Germany,🇫🇷 France,🇮🇹 Italy,🇪🇸 Spain,🇵🇹 Portugal,🇳🇬 Nigeria,🇰🇷 Korea,🇲🇴 Macau,🇦🇺 Australia,🇵🇭 Philippines,🇲🇾 Malaysia,🇹🇭 Thailand,🇧🇷 Brazil,🇦🇷 Argentina,🇨🇱 Chile,🇺🇳 Server,🔘 DIRECT,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Color/Outbound.png
 # Streaming Global
 🎬 Streaming = select,🔰 Proxy,🇭🇰 Hong Kong,🇨🇳 Taiwan,🇸🇬 Singapore,🇯🇵 Japan,🇺🇸 America,🇺🇳 Server,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Streaming.png
 # CNTV APAC
@@ -103,14 +103,14 @@ FINAL,🔰 Proxy
 
 [Remote Rule]
 # Unbreak 后续规则修正
-https://raw.githubusercontent.com/HotKids/Rules/master/Surge/RULE-SET/Unbreak.list, policy=🔘 DIRECT, tag=Unbreak, enabled=true
+https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/Unbreak.list, policy=🔘 DIRECT, tag=Unbreak, enabled=true
 # Private 私有网络
 https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/private.txt, policy=🔘 DIRECT, tag=Private, enabled=true
 # HTTPDNS 请求/流量阻止
 https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/HTTPDNS.Block.list, policy=🚧 AdGuard, tag=HTTPDNS, enabled=true
 # Advertising 广告
 https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/reject.txt, policy=🚧 AdGuard, tag=Reject, enabled=true
-https://raw.githubusercontent.com/HotKids/Rules/master/Surge/RULE-SET/AD.list, policy=🚧 AdGuard, tag=Adblock, enabled=true
+https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/AD.list, policy=🚧 AdGuard, tag=Adblock, enabled=true
 https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Reject/Advertising.list, policy=🚧 AdGuard, tag=Advertising, enabled=true
 # Privacy 隐私
 https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Reject/Tracking.list, policy=🚧 AdGuard, tag=Tracking, enabled=true
@@ -119,50 +119,50 @@ https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/R
 # Global Area Network
 # > Streaming by Region
 # >> Streaming TW
-https://raw.githubusercontent.com/HotKids/Rules/master/Surge/RULE-SET/Streaming_TW.list, policy=🇨🇳 Taiwan, tag=Streaming_TW, enabled=true
+https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/Streaming_TW.list, policy=🇨🇳 Taiwan, tag=Streaming_TW, enabled=true
 # >> Streaming JP
-https://raw.githubusercontent.com/HotKids/Rules/master/Surge/RULE-SET/Streaming_JP.list, policy=🇯🇵 Japan, tag=Streaming_JP, enabled=true
+https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/Streaming_JP.list, policy=🇯🇵 Japan, tag=Streaming_JP, enabled=true
 # >> Streaming US
-https://raw.githubusercontent.com/HotKids/Rules/master/Surge/RULE-SET/Streaming_US.list, policy=🇺🇸 America, tag=Streaming_US, enabled=true
+https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/Streaming_US.list, policy=🇺🇸 America, tag=Streaming_US, enabled=true
 # > Streaming
-https://raw.githubusercontent.com/HotKids/Rules/master/Surge/RULE-SET/Streaming.list, policy=🎬 Streaming, tag=Streaming, enabled=true
+https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/Streaming.list, policy=🎬 Streaming, tag=Streaming, enabled=true
 # > CNTV（适用于 iQIYI Intl,WeTV,Bilibili 等大陆在港台东南亚提供服务的流媒体服务）
-https://raw.githubusercontent.com/HotKids/Rules/master/Surge/RULE-SET/CNTV.list, policy=📺 CNTV, tag=CNTV, enabled=true
+https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/CNTV.list, policy=📺 CNTV, tag=CNTV, enabled=true
 # Global 全球代理规则
 # > AIGC
-https://raw.githubusercontent.com/HotKids/Rules/master/Surge/RULE-SET/Gemini.list, policy=🔍 Google, tag=Gemini, enabled=true
-https://raw.githubusercontent.com/HotKids/Rules/master/Surge/RULE-SET/GenAI.list, policy=🤖 AIGC, tag=GenAI, enabled=true
+https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/Gemini.list, policy=🔍 Google, tag=Gemini, enabled=true
+https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/GenAI.list, policy=🤖 AIGC, tag=GenAI, enabled=true
 # > Apple
 # >> iCloud Private Relay
-https://raw.githubusercontent.com/HotKids/Rules/master/Surge/RULE-SET/Apple/iCloud.PrivateRelay.list, policy=🔰 Proxy, tag=iCloud Private Relay, enabled=true
+https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/Apple/iCloud.PrivateRelay.list, policy=🔰 Proxy, tag=iCloud Private Relay, enabled=true
 # >> Apple News
-https://raw.githubusercontent.com/HotKids/Rules/master/Surge/RULE-SET/Apple/Apple%20News.list, policy=🇺🇸 America, tag=Apple News, enabled=true
+https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/Apple/Apple%20News.list, policy=🇺🇸 America, tag=Apple News, enabled=true
 # >> Apple TV
-https://raw.githubusercontent.com/HotKids/Rules/master/Surge/RULE-SET/Apple/Apple%20TV.list, policy=🍏 Apple TV, tag=Apple TV, enabled=true
+https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/Apple/Apple%20TV.list, policy=🍏 Apple TV, tag=Apple TV, enabled=true
 # >> Apple Services
-https://raw.githubusercontent.com/HotKids/Rules/master/Surge/RULE-SET/Apple/Apple%20CN.list, policy=🔘 DIRECT, tag=Apple CN, enabled=true
-https://raw.githubusercontent.com/HotKids/Rules/master/Surge/RULE-SET/Apple/Apple.list, policy=🍎 Apple, tag=Apple, enabled=true
+https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/Apple/Apple%20CN.list, policy=🔘 DIRECT, tag=Apple CN, enabled=true
+https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/Apple/Apple.list, policy=🍎 Apple, tag=Apple, enabled=true
 # > Crypto
-https://raw.githubusercontent.com/HotKids/Rules/master/Surge/RULE-SET/Crypto.list, policy=🪙 Crypto, tag=Crypto, enabled=true
+https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/Crypto.list, policy=🪙 Crypto, tag=Crypto, enabled=true
 # > Google
-https://raw.githubusercontent.com/HotKids/Rules/master/Surge/RULE-SET/Google.list, policy=🔍 Google, tag=Google, enabled=true
+https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/Google.list, policy=🔍 Google, tag=Google, enabled=true
 # > Finance
-https://raw.githubusercontent.com/HotKids/Rules/master/Surge/RULE-SET/Credit.list, policy=💳 Credit, tag=Credit, enabled=true
+https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/Credit.list, policy=💳 Credit, tag=Credit, enabled=true
 # > PayPal
-https://raw.githubusercontent.com/HotKids/Rules/master/Surge/RULE-SET/PayPal.list, policy=💳 Credit, tag=PayPal, enabled=true
+https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/PayPal.list, policy=💳 Credit, tag=PayPal, enabled=true
 # > Telegram
-https://raw.githubusercontent.com/HotKids/Rules/master/Surge/RULE-SET/Telegram.list, policy=📬 Telegram, tag=Telegram, enabled=true
+https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/Telegram.list, policy=📬 Telegram, tag=Telegram, enabled=true
 # > Mail
-https://raw.githubusercontent.com/HotKids/Rules/master/Surge/RULE-SET/Spark.list, policy=📧 Mail, tag=Mail, enabled=true
+https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/Spark.list, policy=📧 Mail, tag=Mail, enabled=true
 # Global (DNS Cache Pollution) / (IP Blackhole) / (Region-Restricted Access Denied) / (Network Jitter)
-https://raw.githubusercontent.com/HotKids/Rules/master/Surge/RULE-SET/Proxy.list, policy=🔰 Proxy, tag=Proxy, enabled=true
+https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/Proxy.list, policy=🔰 Proxy, tag=Proxy, enabled=true
 https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/proxy.txt, policy=🔰 Proxy, tag=Global, enabled=true
 # China Area Network
 https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/direct.txt, policy=🔘 DIRECT, tag=China, enabled=true
 https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.China.list, policy=🔘 DIRECT, tag=ASN China, enabled=true
 https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/cncidr.txt, policy=🔘 DIRECT, tag=CNCIDR, enabled=true
 # Local Area Network
-https://raw.githubusercontent.com/HotKids/Rules/master/Surge/RULE-SET/LAN.list, policy=🔘 DIRECT, tag=LAN, enabled=true
+https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/LAN.list, policy=🔘 DIRECT, tag=LAN, enabled=true
 
 [Host]
 
