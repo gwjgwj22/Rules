@@ -1,5 +1,5 @@
 # Clash
-# Date: 2026-06-28 12:25:05
+# Date: 2026-06-28 15:13:25
 # Author: @egwj
 
 # 通用设置
@@ -381,7 +381,27 @@ proxy-groups:
       - 🇺🇸 America
       - 🇯🇵 Japan
 
+  #Spotify
+  - name: "🎵 Spotify"
+    type: select
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Spotify.png
+    proxies:
+      - 🔘 DIRECT
+      - 🔰 Proxy
+      - 🇭🇰 Hong Kong
+      - 🇵🇭 Philippines
+
   # Google
+  # > YouTube
+  - name: "🖥 YouTube"
+    type: select
+    icon: https://testingcf.jsdelivr.net/gh/HotKids/Rules@master/Quantumult/X/Images/Color/YouTube.png
+    proxies:
+      - 🇺🇸 America
+      - 🇲🇴 Macau
+      - 🔰 Proxy
+
+  # > Google All
   - name: "🔍 Google"
     type: select
     icon: https://testingcf.jsdelivr.net/gh/HotKids/Rules@master/Quantumult/X/Images/Color/Google.png
@@ -396,7 +416,6 @@ proxy-groups:
     proxies:
       - 🇺🇸 America
       - 🇸🇬 Singapore
-      - 🇲🇴 Macau
       - 🔰 Proxy
 
   # Crypto
