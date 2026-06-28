@@ -1,5 +1,5 @@
 # Loon
-# Date: 2026-06-28 11:43:25
+# Date: 2026-06-28 12:25:05
 # Author: @egwj
 
 [General]
@@ -110,7 +110,7 @@ https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/private.txt, 
 https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/HTTPDNS.Block.list, policy=🚧 AdGuard, tag=HTTPDNS, enabled=true
 # Advertising 广告
 https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/reject.txt, policy=🚧 AdGuard, tag=Reject, enabled=true
-https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/AD.list, policy=🚧 AdGuard, tag=Adblock, enabled=true
+https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/Block.list, policy=🚧 AdGuard, tag=Block, enabled=true
 https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Reject/Advertising.list, policy=🚧 AdGuard, tag=Advertising, enabled=true
 # Privacy 隐私
 https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Reject/Tracking.list, policy=🚧 AdGuard, tag=Tracking, enabled=true
@@ -161,7 +161,7 @@ https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/Telegram.list
 # > Mail
 https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/Spark.list, policy=📧 Mail, tag=Mail, enabled=true
 # Global (DNS Cache Pollution) / (IP Blackhole) / (Region-Restricted Access Denied) / (Network Jitter)
-https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/Proxy.list, policy=🔰 Proxy, tag=Proxy, enabled=true
+https://raw.githubusercontent.com/egwj/Rules/master/Surge/RULE-SET/Reroute.list, policy=🔰 Proxy, tag=Reroute, enabled=true
 https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/proxy.txt, policy=🔰 Proxy, tag=Global, enabled=true
 # China Area Network
 https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/direct.txt, policy=🔘 DIRECT, tag=China, enabled=true
