@@ -3,6 +3,8 @@
   "rules": [
     {
       "domain": [
+        "152vod-adaptive.akamaized.net",
+        "87vod-adaptive.akamaized.net",
         "aka01p.akamaized.net",
         "aka02p.akamaized.net",
         "aka36p.akamaized.net",
@@ -38,14 +40,19 @@
     },
     {
       "domain_suffix": [
+        "appier.net",
         "bahamut.com.tw",
+        "bitmovin.com",
         "catch.net.tw",
         "catchplay.com",
         "chocotv.com.tw",
         "friday.tw",
         "fridaylogger.com",
         "gamer.com.tw",
+        "giloo.ist",
+        "hinet.net",
         "intl.iqiyi.com",
+        "ipapi.co",
         "iq.com",
         "kfs.io",
         "kkbox.com",
@@ -54,7 +61,11 @@
         "kktv.me",
         "linetv.tw",
         "myvideo.net.tw",
-        "svc.litv.tv"
+        "qgraph.io",
+        "quantumgraph.com",
+        "svc.litv.tv",
+        "vimeo.com",
+        "vimeocdn.com"
       ]
     },
     {

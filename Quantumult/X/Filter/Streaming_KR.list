@@ -16,8 +16,13 @@ DOMAIN-KEYWORD,wavve,Streaming_KR
 
 # tving
 DOMAIN-SUFFIX,cj.drmkeyserver.com,Streaming_KR
-DOMAIN-SUFFIX,image.pip.cjenm.com,Streaming_KR
+DOMAIN-SUFFIX,graph.facebook.com,Streaming_KR
 DOMAIN-SUFFIX,hqkoz2vau9.execute-api.ap-northeast-2.amazonaws.com,Streaming_KR
+DOMAIN-SUFFIX,image.pip.cjenm.com,Streaming_KR
+DOMAIN-SUFFIX,ipv4.cws.conviva.com,Streaming_KR
+DOMAIN-SUFFIX,ipv6.cws.conviva.com,Streaming_KR
+DOMAIN-SUFFIX,launches.appsflyer.com,Streaming_KR
+DOMAIN-SUFFIX,sdk.iad-05.braze.com,Streaming_KR
 DOMAIN-SUFFIX,tving.com,Streaming_KR
 DOMAIN-KEYWORD,tving,Streaming_KR
 
@@ -34,3 +39,10 @@ DOMAIN-SUFFIX,smartmediarep.com,Streaming_KR
 DOMAIN-SUFFIX,afreecatv.com,Streaming_KR
 DOMAIN-KEYWORD,afreeca,Streaming_KR
 DOMAIN-KEYWORD,afreecatv,Streaming_KR
+
+# KBS
+DOMAIN-SUFFIX,kbs.co.kr,Streaming_KR
+DOMAIN-SUFFIX,co.kr,Streaming_KR
+DOMAIN-SUFFIX,com.kr,Streaming_KR
+DOMAIN-SUFFIX,vod.kbs.co.kr,Streaming_KR
+DOMAIN-KEYWORD,.kr,Streaming_KR

@@ -80,3 +80,18 @@ payload:
   - DOMAIN-SUFFIX,catch.net.tw
   - DOMAIN,applemediaservice.keydelivery.southeastasia.media.azure.net
   - DOMAIN,akamaiendpoint-applemediaservice-aase.streaming.media.azure.net
+
+  # > giloo
+  - DOMAIN-SUFFIX,giloo.ist
+  - DOMAIN-SUFFIX,vimeocdn.com
+  - DOMAIN-SUFFIX,vimeo.com
+  - DOMAIN-SUFFIX,quantumgraph.com
+  - DOMAIN-SUFFIX,bitmovin.com
+  - DOMAIN-SUFFIX,appier.net
+  - DOMAIN-SUFFIX,ipapi.co
+  - DOMAIN-SUFFIX,qgraph.io
+  - DOMAIN,87vod-adaptive.akamaized.net
+  - DOMAIN,152vod-adaptive.akamaized.net
+
+  # > hamivideo
+  - DOMAIN-SUFFIX,hinet.net

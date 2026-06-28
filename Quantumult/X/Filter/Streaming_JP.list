@@ -36,3 +36,129 @@ DOMAIN-SUFFIX,unext.jp,Streaming_JP
 DOMAIN-SUFFIX,nxtv.jp,Streaming_JP
 # DOMAIN,streamd01ca-nxtv-jp.akamaized.net
 DOMAIN,us-central1-u-next-apps.cloudfunctions.net,Streaming_JP
+
+DOMAIN-SUFFIX,hnext.jp,Streaming_JP
+
+# > DMM
+DOMAIN-SUFFIX,akabeesoft2.com,Streaming_JP
+DOMAIN-SUFFIX,akabeesoft3.com,Streaming_JP
+OMAIN-SUFFIX,akatsukiworks.com,Streaming_JP
+DOMAIN-SUFFIX,alicesoft.com,Streaming_JP
+DOMAIN-SUFFIX,api-p.videomarket.jp,Streaming_JP
+DOMAIN-SUFFIX,bluekai.com,Streaming_JP
+DOMAIN-SUFFIX,cosmiccute.com,Streaming_JP
+DOMAIN-SUFFIX,ddo.jp,Streaming_JP
+DOMAIN-SUFFIX,dmm-extension.com,Streaming_JP
+DOMAIN-SUFFIX,dmm.co.jp,Streaming_JP
+DOMAIN-SUFFIX,dmm.com,Streaming_JP
+DOMAIN-SUFFIX,dmm.hk,Streaming_JP
+DOMAIN-SUFFIX,dmmapis.com,Streaming_JP
+DOMAIN-SUFFIX,dmmrex.com,Streaming_JP
+DOMAIN-SUFFIX,fout.jp,Streaming_JP
+DOMAIN-SUFFIX,gmossp-sp.jp,Streaming_JP
+DOMAIN-SUFFIX,hibiki-site.com,Streaming_JP
+DOMAIN-SUFFIX,i-mobile.co.jp,Streaming_JP
+DOMAIN-SUFFIX,im-apps.net,Streaming_JP
+DOMAIN-SUFFIX,impact-ad.jp,Streaming_JP
+DOMAIN-SUFFIX,ladsp.com,Streaming_JP
+DOMAIN-SUFFIX,microad.co.jp,Streaming_JP
+DOMAIN-SUFFIX,microad.jp,Streaming_JP
+DOMAIN-SUFFIX,minori.ph,Streaming_JP
+DOMAIN-SUFFIX,navismithapis-cdn.com,Streaming_JP
+DOMAIN-SUFFIX,socdm.com,Streaming_JP
+DOMAIN-SUFFIX,tenco.cc,Streaming_JP
+DOMAIN-SUFFIX,wheel-soft.com,Streaming_JP
+IP-CIDR,125.6.189.7/32,Streaming_JP,no-resolve
+IP-CIDR,203.104.209.7/32,Streaming_JP,no-resolve
+
+# > Niconico
+DOMAIN-SUFFIX,dmc.nico,Streaming_JP
+DOMAIN-SUFFIX,nicodic.jp,Streaming_JP
+DOMAIN-SUFFIX,nicomanga.jp,Streaming_JP
+DOMAIN-SUFFIX,niconico.com,Streaming_JP
+DOMAIN-SUFFIX,nicoseiga.jp,Streaming_JP
+DOMAIN-SUFFIX,nicovideo.jp,Streaming_JP
+DOMAIN-SUFFIX,nimg.jp,Streaming_JP
+DOMAIN-SUFFIX,simg.jp,Streaming_JP
+DOMAIN-SUFFIX,socdm.com,Streaming_JP
+DOMAIN-KEYWORD,niconico,Streaming_JP
+
+# NAME: GYAO！
+DOMAIN-SUFFIX,gyao.yahoo.co.jp,Streaming_JP
+DOMAIN-KEYWORD,gyao,Streaming_JP
+
+# NAME: WOWOW
+DOMAIN-SUFFIX,wowow.co.jp,Streaming_JP
+DOMAIN-KEYWORD,wowow,Streaming_JP
+
+# NAME: videomarket
+DOMAIN-SUFFIX,videomarket.jp,Streaming_JP
+DOMAIN-KEYWORD,videomarket,Streaming_JP
+
+# NAME: radiko
+DOMAIN-SUFFIX,radiko.jp,Streaming_JP
+DOMAIN-SUFFIX,radionikkei.jp,Streaming_JP
+DOMAIN-SUFFIX,smartstream.ne.jp,Streaming_JP
+DOMAIN-KEYWORD,radiko,Streaming_JP
+
+# NAME: Karaoke@DAM
+DOMAIN-SUFFIX,clubdam.com,Streaming_JP
+DOMAIN-KEYWORD,clubdam,Streaming_JP
+
+# NAME: J:com On Demand
+DOMAIN-SUFFIX,zaq.ne.jp,Streaming_JP
+DOMAIN-SUFFIX,myjcom.jp,Streaming_JP
+DOMAIN-SUFFIX,jcom.co.jp,Streaming_JP
+
+# NAME: Games
+DOMAIN-SUFFIX,colorfulpalette.org,Streaming_JP
+DOMAIN-SUFFIX,cygames.co.jp,Streaming_JP
+DOMAIN-SUFFIX,cygames.jp,Streaming_JP
+DOMAIN-SUFFIX,konosubafd.jp,Streaming_JP
+DOMAIN-SUFFIX,prd-priconne-redive.akamaized.net,Streaming_JP
+DOMAIN-SUFFIX,worldflipper.jp,Streaming_JP
+IP-CIDR,203.104.209.0/24,Streaming_JP,no-resolve
+
+# NAME: Rakuten TV
+DOMAIN-SUFFIX,ebates.com,Streaming_JP
+DOMAIN-SUFFIX,infoseek.co.jp,Streaming_JP
+DOMAIN-SUFFIX,o50.jp,Streaming_JP
+DOMAIN-SUFFIX,r10.to,Streaming_JP
+DOMAIN-SUFFIX,r10s.com,Streaming_JP
+DOMAIN-SUFFIX,r10s.jp,Streaming_JP
+DOMAIN-SUFFIX,rakuten-static.com,Streaming_JP
+DOMAIN-SUFFIX,rakuten.ca,Streaming_JP
+DOMAIN-SUFFIX,rakuten.co.jp,Streaming_JP
+DOMAIN-SUFFIX,rakuten.com,Streaming_JP
+DOMAIN-SUFFIX,rakuten.com.tw,Streaming_JP
+DOMAIN-SUFFIX,rakuten.ne.jp,Streaming_JP
+DOMAIN-SUFFIX,rakuten.tw,Streaming_JP
+DOMAIN-SUFFIX,rclon.com,Streaming_JP
+DOMAIN-SUFFIX,rebates.jp,Streaming_JP
+DOMAIN-SUFFIX,showtime.co.jp,Streaming_JP
+DOMAIN-SUFFIX,viber.co.jp,Streaming_JP
+DOMAIN-SUFFIX,viber.com,Streaming_JP
+
+# NAME: docomo
+DOMAIN-SUFFIX,beetv.jp,Streaming_JP
+DOMAIN-SUFFIX,dmkt-sp.jp,Streaming_JP
+DOMAIN-SUFFIX,docomo.ne.jp,Streaming_JP
+DOMAIN-SUFFIX,jp.adventurekk.com,Streaming_JP
+DOMAIN-SUFFIX,js.stripe.com,Streaming_JP
+DOMAIN-SUFFIX,js.tappaysdk.com,Streaming_JP
+DOMAIN-SUFFIX,m.stripe.network,Streaming_JP
+DOMAIN-SUFFIX,ntt.com,Streaming_JP
+DOMAIN-SUFFIX,nttdocomo.co.jp,Streaming_JP
+DOMAIN-SUFFIX,co.jp,Streaming_JP
+DOMAIN-SUFFIX,com.jp,Streaming_JP
+DOMAIN-KEYWORD,docomo,Streaming_JP
+DOMAIN-KEYWORD,ntt,Streaming_JP
+DOMAIN-KEYWORD,softbank,Streaming_JP
+DOMAIN-KEYWORD,.jp,Streaming_JP
+
+# 混杂
+DOMAIN-SUFFIX,xn-app1.com,Streaming_JP
+DOMAIN-SUFFIX,xncd0f6edc4c2e69e1d4bdc89b0a8490ce32c70ef2.com,Streaming_JP
+DOMAIN-SUFFIX,xnxx-cdn.com,Streaming_JP
+DOMAIN-SUFFIX,txnhh.com,Streaming_JP
+DOMAIN-KEYWORD,xnxx,Streaming_JP

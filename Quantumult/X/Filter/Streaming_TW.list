@@ -87,3 +87,20 @@ DOMAIN-SUFFIX,myvideo.net.tw,Streaming_TW
 DOMAIN-SUFFIX,catch.net.tw,Streaming_TW
 DOMAIN,applemediaservice.keydelivery.southeastasia.media.azure.net,Streaming_TW
 DOMAIN,akamaiendpoint-applemediaservice-aase.streaming.media.azure.net,Streaming_TW
+
+# > giloo
+USER-AGENT,giloo*,Streaming_TW
+DOMAIN-SUFFIX,giloo.ist,Streaming_TW
+DOMAIN-SUFFIX,vimeocdn.com,Streaming_TW
+DOMAIN-SUFFIX,vimeo.com,Streaming_TW
+DOMAIN-SUFFIX,quantumgraph.com,Streaming_TW
+DOMAIN-SUFFIX,bitmovin.com,Streaming_TW
+DOMAIN-SUFFIX,appier.net,Streaming_TW
+DOMAIN-SUFFIX,ipapi.co,Streaming_TW
+DOMAIN-SUFFIX,qgraph.io,Streaming_TW
+DOMAIN,87vod-adaptive.akamaized.net,Streaming_TW
+DOMAIN,152vod-adaptive.akamaized.net,Streaming_TW
+
+# > hamivideo
+USER-AGENT,hamivideo*,Streaming_TW
+DOMAIN-SUFFIX,hinet.net,Streaming_TW

@@ -1,0 +1,15 @@
+USER-AGENT,encoreTVB*,Streaming_HK
+DOMAIN-SUFFIX,encoretvb.com,Streaming_HK
+DOMAIN,edge.api.brightcove.com,Streaming_HK
+DOMAIN,bcbolt446c5271-a.akamaihd.net,Streaming_HK
+
+# > setantasports
+# 此条分流只是让 setantasports 串流时走 HK 节点，需搭配 setantasports 相关分流使用
+DOMAIN-SUFFIX,dice-live-eu.akamaized.net,Streaming_HK
+DOMAIN-SUFFIX,dve-streams.akamaized.net,Streaming_HK
+DOMAIN-SUFFIX,dice-live-eu.akamaized.net,Streaming_HK
+
+# > myTV SUPER
+USER-AGENT,mytv*,Streaming_HK
+DOMAIN-SUFFIX,mytvsuper.com,Streaming_HK
+DOMAIN-SUFFIX,tvb.com,Streaming_HK

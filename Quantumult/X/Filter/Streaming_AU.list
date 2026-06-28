@@ -1,3 +1,9 @@
+# > Stan
+USER-AGENT,Stan*,Streaming_AU
+DOMAIN-SUFFIX,stan.com.au,Streaming_AU
+DOMAIN,aws.stan.video,Streaming_AU
+# DOMAIN,streamcoimg-a.akamaihd.net
+
 # NAME: 7 plus
 DOMAIN,7plus.com.au,Streaming_AU
 DOMAIN,npc-live-sevennetwork.akamaized.net,Streaming_AU

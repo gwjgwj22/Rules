@@ -351,3 +351,13 @@ DOMAIN-SUFFIX,myvideo.net.tw,Streaming
 DOMAIN-SUFFIX,catch.net.tw,Streaming
 DOMAIN,applemediaservice.keydelivery.southeastasia.media.azure.net,Streaming
 DOMAIN,akamaiendpoint-applemediaservice-aase.streaming.media.azure.net,Streaming
+
+# > Viu
+# USER-AGENT,Viu*,Viu
+DOMAIN-SUFFIX,viu.com,Streaming
+DOMAIN,pccw-cf-video.akamaized.net,Streaming
+DOMAIN,dfp6rglgjqszk.cloudfront.net,Streaming
+DOMAIN,d1k2us671qcoau.cloudfront.net,Streaming
+DOMAIN,d2anahhhmp1ffz.cloudfront.net,Streaming
+DOMAIN,d3o7oi00quuwqu.cloudfront.net,Streaming
+DOMAIN,d31rgcmny3inu.cloudfront.net,Streaming
