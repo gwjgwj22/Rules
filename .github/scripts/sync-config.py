@@ -44,6 +44,8 @@ _SURFBOARD_SUPPORTED_ACTIONS = frozenset({"direct", "reject"})
 _LOON_SUPPORTED_ACTIONS = frozenset({"direct", "reject"})
 _LOON_ACTION_VALUE_MAP = {"direct": "DIRECT", "reject": "REJECT",
                           "reject-tinygif": "REJECT", "reject-drop": "REJECT-DROP", "reject-no-drop": "REJECT"}
+# Loon Remote Filter 负向断言（过滤流量统计节点）
+_LOON_FILTER_NEG = r"(?!.*(?i)\b(USE(D)?|TOTAL|EXPIRE|RESET|Panel|Premium)\b|\d{4}-\d{2}-\d{2}|\d+(\.\d+)?\s*G)"
 _CLASH_SUPPORTED_ACTIONS = frozenset({"direct", "reject", "reject-drop"})
 # Surge → Clash 规则类型重命名（含 AND 子规则）
 _CLASH_TYPE_RENAMES = {"DEST-PORT": "DST-PORT", "PROTOCOL": "NETWORK"}
@@ -1590,12 +1592,63 @@ def gen_rules_and_providers(
 # 生成 Loon [Proxy Group]
 # ---------------------------------------------------------------------------
 
+def _derive_loon_filter_name(
+    group_name: str,
+    surge_regex: str,
+    filter_map: dict[str, str],
+    auto_filters: dict[str, str],
+) -> str:
+    """为 include-other-group 组推导或生成 Loon Remote Filter 名。"""
+    all_names = set(filter_map.values()) | set(auto_filters.keys())
+    code_m = re.search(r'\b([A-Z]{2,3})\b', surge_regex)
+    if code_m:
+        code = code_m.group(1)
+    else:
+        words = strip_emoji(group_name).split()
+        code = "".join(w[0].upper() for w in words[:2]) if words else "XX"
+    base, counter = f"Sub-{code}", 2
+    fname = base
+    while fname in all_names:
+        fname = f"{base}{counter}"
+        counter += 1
+    auto_filters[fname] = f"^(?=.*(?i)({surge_regex})){_LOON_FILTER_NEG}.*"
+    return fname
+
+
+def _inject_loon_remote_filters(header: str, auto_filters: dict[str, str]) -> str:
+    """将自动生成的 Remote Filter 注入到 loon_header [Remote Filter] 段末尾（catch-all 之前）。"""
+    if not auto_filters:
+        return header
+    lines = header.splitlines()
+    in_rf = False
+    insert_idx = len(lines)
+    for i, line in enumerate(lines):
+        s = line.strip()
+        if s == "[Remote Filter]":
+            in_rf = True
+            continue
+        if in_rf:
+            if s.startswith("[") and s.endswith("]"):
+                insert_idx = i
+                break
+            if re.match(r'^\S+\s*=\s*NameRegex.*\^\(\?=\.\+\)', s):
+                insert_idx = i
+                break
+    new_lines = [
+        f'{fname} = NameRegex, FilterKey = "{key}"'
+        for fname, key in auto_filters.items()
+    ]
+    lines[insert_idx:insert_idx] = new_lines
+    return "\n".join(lines)
+
+
 def _fmt_loon_group(
     name: str,
     gtype: str,
     params: dict[str, str],
     proxies: list[str],
     filter_map: dict[str, str],
+    auto_filters: dict[str, str] | None = None,
 ) -> str | None:
     """格式化为 Loon Proxy Group 单行。返回 None 表示跳过该组。"""
     icon = params.get("icon-url", "")
@@ -1617,7 +1670,15 @@ def _fmt_loon_group(
         return f"{name} = select,{filter_name}{icon_part}"
 
     if params.get("include-other-group", ""):
-        return None  # Loon 不直接支持，由 builtin inject_names 或 FilterMap 覆盖
+        # 优先从 filter_map 查找（已由 _sync_loon 预填充）
+        if fm_val := filter_map.get(name, ""):
+            filter_name = fm_val.split(",")[0].strip()
+            return f"{name} = select,{filter_name}{icon_part}"
+        # 自动生成：用 policy-regex-filter 构造 Remote Filter
+        if auto_filters is not None and (surge_regex := params.get("policy-regex-filter", "")):
+            filter_name = _derive_loon_filter_name(name, surge_regex, filter_map, auto_filters)
+            return f"{name} = select,{filter_name}{icon_part}"
+        return None  # 无 filter 可用，由 builtin inject_names 覆盖
 
     if params.get("policy-path", ""):
         return None  # 由 Builtin inject_names 替换
@@ -1635,6 +1696,7 @@ def gen_loon_proxy_groups(
     pg_inject: dict | None,
     filter_map: dict[str, str],
     adblock_proxy_lines: list[str] | None = None,
+    auto_filters: dict[str, str] | None = None,
 ) -> str:
     """生成 Loon [Proxy Group] 段落。"""
     out: list[str] = ["[Proxy Group]"]
@@ -1682,7 +1744,7 @@ def gen_loon_proxy_groups(
                 ph.skip()
             continue
 
-        loon_line = _fmt_loon_group(name, g["type"], g["params"], g["proxies"], filter_map)
+        loon_line = _fmt_loon_group(name, g["type"], g["params"], g["proxies"], filter_map, auto_filters)
         if loon_line is None:
             ph.skip()
             continue
@@ -2481,6 +2543,23 @@ def _sync_loon(
     else:
         filter_map = {}
 
+    # include-other-group 组：同样尝试从 filter_defs 自动匹配
+    inject_names = set(loon_pg_inject["names"]) if loon_pg_inject else set()
+    for grp_line in group_lines:
+        g = parse_group_line(grp_line)
+        if not g or g["name"] in inject_names or g["name"] in filter_map:
+            continue
+        if not g["params"].get("include-other-group"):
+            continue
+        for filter_name, pattern in filter_defs.items():
+            try:
+                clean_pat = pattern.replace("(?i)", "")
+                if re.search(clean_pat, g["name"], re.IGNORECASE):
+                    filter_map[g["name"]] = filter_name
+                    break
+            except re.error:
+                pass
+
     print(f"  FilterMap (auto): {list(filter_map.keys())}" if not explicit_filter_map else f"  FilterMap: {list(filter_map.keys())}")
     print(f"  Loon skip: {loon_skips}")
     if loon_pg_inject:
@@ -2496,7 +2575,14 @@ def _sync_loon(
             break
 
     loon_rename_map = loon.get("rename_map", {})
-    pg_loon = gen_loon_proxy_groups(group_lines, loon_skips, loon_pg_inject, filter_map, adblock_proxy_lines=proxy_lines)
+    auto_filters: dict[str, str] = {}
+    pg_loon = gen_loon_proxy_groups(
+        group_lines, loon_skips, loon_pg_inject, filter_map,
+        adblock_proxy_lines=proxy_lines, auto_filters=auto_filters,
+    )
+    if auto_filters:
+        loon_header = _inject_loon_remote_filters(loon_header, auto_filters)
+        print(f"  Auto Remote Filters: {list(auto_filters.keys())}")
     remote_rules = gen_loon_remote_rules(rule_lines, loon_skips, loon_rename_map)
 
     # [Rule]：静态规则 + FINAL（来自 Surge）
